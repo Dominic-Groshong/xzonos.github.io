@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "Homework 1"
+author: "Dominic Groshong"
+date:   2018-09-27 14:02:03 -0700
+categories: Homework
+
+---
+Introduction
+------
+For this first homework, we’re required to manually code HTML and CSS, while practicing with Git. The website is built with Bootstrap v4, common prebuilt CSS and JavaScript library. The challenge I had with this project is my overcoplication of the website, I am used to use Drupal for everything. Thus having to manually add in headers, footer, sidebars, menus, etc. to every page was painful.
+
+Step 1
+------
+
+The first step was to install the command line version of git. This was easy since due to my work it was already installed.
+```bash
+$ git --version
+git version 2.19.0.windows.1
+```
+I created a new repository on the github.com site and pulled it to my general repository folder. This went quickly and I already had my username and password setup so pushing back to the repository had no issues.
+
+Step 2
+------
+
+### HTML5 - Multipage site
+
+It has been many years since I have hand written HTML, I probably spent 3-4 hours attempting to get around it writing HTML manually. I started by attempting to using PHP (which I found out wont work on git pages), from there I tried to use HTML5 embeds (these "work" but embed an entire HTML document with their own <html> document), after that failed I went to jQuery and got the following code working:
+
+```javascript
+$("#header").load("resources/header.html");
+```
+
+This all went out the window once I found out we should not use JavaScript for this first assignment.
+
+After this point I worked on getting my site designed using bootstrap. Fought with getting the bootstrap classes in the correct order for things like the menu and grid.
+
+#### Sketches
+[insert sketches]
+
+#### Bootstrap Code
+
+I did not host the bootstrap files locally and instead used the bootstrap CDN and so my importing looked like this:
+
+```html
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+```
+
+This is the code order I had to use to get the bootstrap imports to work:
+```html
+<div class="container">
+	<nav class="navbar navbar-expand-lg">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="mainMenuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="history.html">History</a>
+			</div>
+
+			</li>
+			<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+</div>
+```
+
+
+
+[Content/Coding] Write a multi-page, hyperlinked set of web pages on a subject of your choice. The content is irrelevant, it's the HTML and CSS that matters. Here are some specific requirements for your work:
+You must use Bootstrap (v4) for the layout of all pages and must demonstrate both single column layout and two or more column formatting
+You must have a separate CSS file (e.g. styles.css) in which you write some of your own classes and that you use somewhere
+You'll need a navigation bar or menu that contains links to all your pages
+You need to have at least one table
+and at least two kinds of lists: ol, ul and dl
+All main elements need to be styled consistently: use those defined by Bootstrap or use your own. But please, no obnoxious colors or backgrounds. You should attempt to make a professional and modern looking web page. (NO templates or theme packs! You've got to do this yourself!)
+You must write all code yourself and may not use a WYSIWYG designer such as Dreamweaver. Good (free) HTML and CSS aware editors include Atom, Brackets, Visual Studio Code. When writing HTML and CSS you're doing yourself a disservice if you're not using the Emmet plug-in!
+
+[Test] When finished to your liking, make sure all changes are committed and pushed to your remote repository. Make a note of the "clone" URL of your remote repo. You should be able to clone your repo to anywhere and then open the main .html file (i.e. index.html) and view your pages correctly.
+
+[Setup] Create a repository on GitHub and enable the GitHub Pages feature. This gives you a normal Git repository AND a hosted web server automatically serving pages from your repo. You can then use this web server to view your homework's html pages on the web. More importantly, it will also serve as your Portfolio this term. It will showcase all your work. You'll want it to look very nice, as it is public and it has your name on it. Future employers may see it! Make a nice landing page that has your name and then a link to a CS 460 landing page. This CS 460 page should have links to separate pages for each homework. For each homework you'll have one or more pages that showcase your work, and include all your code. They should be written in a Blog post kind of way. Include written explanations of what you're trying to accomplish and then include both your code and links to the working pages. Here are a couple examples from last year:
+alexleclerc.github.io
+ridethatcyclone.github.io
+devonsmith.github.io
+
+NOTE 1: If you already have a Github Pages page and don't want to create a new one under a different email, another option is Netlify. It requires a little more setup and doesn't provide a Markdown to HTML translator (Jekyll) like Github does, but would work fine.
+
+NOTE 2: The requirement here is to use a web site that deploys automatically off a Git repository. This means you can not use a plain old web hosting service. It's important to be using Git as much as possible.
+
+[Portfolio Content] Create a Blog, Post or Journal entry type page within your Pages repository where you show off your work for this homework. Here is my super simple example: morses.github.io (see Homework 1). Of course, take a look at the samples from last year also. You should describe the assignment and then dive into your solution. You must show all important code, or example code that shows you are meeting the requirements, in your post and it should use syntax highlighting. Make sure you have included a link to your actual repo and that it is publicly available. Include a link to your demo page (the HTML and CSS you wrote for #3 above) page somewhere obvious.
+[Turn It In] Visit the class Moodle page and the HW1 link. Review the grading rubric to make sure you'll get full points. Turn in the URL for your Portfolio. I will grade it on the web at some point after the due date and will use the rubric to score it.
+[Optionally] begin assembling a collection of cheat sheets, useful notes, important documentation and code snippets. Put them in your Portfolio some how, maybe a separate page for each topic. Include notes from when you were learning HTML, CSS, Bootstrap and Git. This is for your reference as you progress through the term, and you can use it on the final programming exam!
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
