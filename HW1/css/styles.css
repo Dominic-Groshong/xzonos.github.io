@@ -22,7 +22,7 @@ h1{
 	margin: 0 0 .5em;
 	line-height: 43px;
 	text-transform: uppercase;
-	color: green;
+	color: #FEC652 !important;
 }
 
 h2{
@@ -35,6 +35,7 @@ h3{
 	font-size: 26px;
 	font-weight: 400;
 	margin: 0 0 .25em 0;
+	color: #6AA4A9 !important;
 }
 
 h4{
@@ -54,6 +55,57 @@ h6{
 	font-weight: 800;
 	margin: 0 0 .15em 0 ;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+.body-copy ol {
+  list-style: none;
+  counter-reset: counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.body-copy ol li {
+  counter-increment: counter;
+  display: flex;
+  width: 50%;
+  font-size: 1em;
+  margin-bottom: 0.5rem;
+}
+.body-copy ol li::before {
+  content: "0" counter(counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 1;
+  color: #FEC652;
+}
+
+.body-copy ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.body-copy ul li{
+	list-style: none;
+	display: flex;
+   width: 50%;
+	margin-bottom: 20px;
+}
+
+.body-copy ul li::before{
+	content: "";
+	background: #FEC652;
+	height: 20px;
+	width: 20px;
+	padding: 20px;
+	margin-right: 20px;
+	border-radius: 100%;
+
+}
+
 
 /******************
 		Menu Styles
@@ -94,7 +146,7 @@ h6{
 }
 
 .caption {
-	color: white;
+	color: white !important;
 	text-transform: uppercase;
 	padding: 20px;
 	width: 100%;
@@ -104,6 +156,57 @@ h6{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.caption h1{
+	color: white !important;
+}
+
+/*********************
+			Social Media
+*********************/
+
+.social-media{
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+
+.social-media a{
+	text-indent: -99999px;
+	display: block;
+	opacity: .5;
+}
+
+.social-media li{
+	float: left;
+	padding-left: 20px;
+}
+
+.social-media a:hover{
+	opacity: .75;
+}
+
+.facebook a{
+	background: url(../img/facebook.png) no-repeat center center;
+	height: 40px;
+	width: 40px;
+	background-size: 40px;
+}
+
+.intagram a{
+	background: url(../img/instagram.png) no-repeat center center;
+	height: 40px;
+	width: 40px;
+	background-size: 40px;
+}
+
+.portfolio a{
+	background: url(../img/goback.png) no-repeat center center;
+	height: 40px;
+	width: 40px;
+	background-size: 40px;
+}
+
 
 /*********************
 			Sidebar
@@ -130,6 +233,17 @@ aside h1{
 .btn:hover{
 		background: #425563;
 		color: white;
+}
+
+/**********************
+			Table  Elements
+***********************/
+.left{
+	padding-right: 20px;
+}
+
+.right{
+	padding-left: 20px;
 }
 
 /***********************

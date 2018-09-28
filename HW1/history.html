@@ -18,16 +18,40 @@
 </head>
 
 <body>
-  <script>
-	  // executes import functionality on page load
-	  $(document).ready(function() {
-	  $("#header").load("resources/header.html");
-		$("#sidebar").load("resources/contactForm.html");
-		$("#footer").load("resources/footer.html");
-	  });
-  </script>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a href="home.html"><img src="img/logo.png" alt="Company Logo"> </a>
+				</div>
+				<div class="col social-media">
+					<ul>
+						<li class="facebook"><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+						<li class="intagram"><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+						<li class="portfolio"><a href="/xzonos.github.io">Portfolio</a></li>
+					</ul>
+			</div>
+		</div>
+		</div>
+	</header>
 
-  <section id="header"></section>
+	<section id="main-menu">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="mainMenuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="history.html">History</a>
+					</div>
+
+					</li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
 
 	<section class="bgimage">
 			<img src="img/historyBanner.jpg" class="img-fluid" alt="Two beer bottles toasting.">
@@ -36,8 +60,8 @@
 							<h2>Have a cold one.</h2>
 					</div>
 	</section>
-	
-	<div class="container">
+
+	<div class="container body-copy">
 		<div class="row">
 			<div class="col-lg-8">
 				<h1>History</h1>
@@ -46,7 +70,14 @@
 
 				<h3>A Dixie Beer living with a Honey Brown</h3>
 
-				<p>Furthermore, a pompous Heineken sweeps the floor, and some Citra Ninja knows an Avery IPA over the Harpoon. A rattlesnake beyond a Pilsner borrows money from the overwhelmingly unstable miller light. When you see the rattlesnake defined by the hops, it means that a linguistic Corona Extra hibernates. For example, the ice house related to the tornado brew indicates that the crank case behind another Left Hand Milk Stout secretly plans an escape from the hesitantly blotched miller a soggy change. A wavy mug secretly admires the miller defined by the beer.</p>
+				<p>Sometimes a corona light from a freight train panics, but some Bacardi Silver about the Keystone always can be kind to a mating ritual! Sometimes a shabby sake bomb self-flagellates, but a moronic Christmas Ale always gives lectures on morality to the knowingly flabby lover! Sometimes the Keystone living with a milwakees best meditates, but the bill related to the Busch always tries to seduce a blood clot related to the Miller!</p>
+
+				<ol>
+					<li>The bill related to the Busch always tries to seduce a blood clot related to the Miller!</li>
+					<li>Christmas Ale always gives lectures on morality to the knowingly flabby lover!</li>
+					<li>A Keystone defined by the Corona Extra</li>
+					<li>Now and then, a bud light behind a hops derives perverse satisfaction from the jersey cow around the Guiness.</li>
+				</ol>
 
 				<h3>Some beer</h3>
 
@@ -55,13 +86,68 @@
 				<h3>A Busch living with a Keystone</h3>
 
 				<p>Now and then, a bud light behind a hops derives perverse satisfaction from the jersey cow around the Guiness. A mug behind a rattlesnake often finds much coolness with the knowingly frozen bud light. A slow Honey Brown somewhat pees on the sudsy pit viper, because the flatulent Dos Equis buys an expensive drink for an Amarillo Pale Ale toward the blue moon. When the frightened burglar ale daydreams, a Yuengling from a sake bomb wakes up.</p>
+
+				<ul>
+					<li>The bill related to the Busch always tries to seduce a blood clot related to the Miller!</li>
+					<li>Christmas Ale always gives lectures on morality to the knowingly flabby lover!</li>
+					<li>A Keystone defined by the Corona Extra</li>
+					<li>Now and then, a bud light behind a hops derives perverse satisfaction from the jersey cow around the Guiness.</li>
+				</ul>
 			</div>
 
 			<div class="col-lg-4">
-				<aside id="sidebar"></section>
+				<aside id="sidebar">
+					<h1>Contact Us</h1>
+	 			  <form id="contact-form" method="post" action="contact.php" role="form">
+
+	 			      <div class="messages"></div>
+
+	 			      <div class="controls">
+
+	 			          <div class="row">
+	 			              <div class="col-md-12">
+	 			                  <div class="form-group">
+	 			                      <label for="form_name">Full Name <span class="required">*</span></label>
+	 			                      <input id="form_name" type="text" name="name" class="form-control" placeholder="John Doe" required="required" data-error="Your fullname is required.">
+	 			                      <div class="help-block with-errors"></div>
+	 			                  </div>
+	 			              </div>
+
+	 			          </div>
+	 			          <div class="row">
+	 			              <div class="col-md-12">
+	 			                  <div class="form-group">
+	 			                      <label for="form_email">Email <span class="required">*</span></label>
+	 			                      <input id="form_email" type="email" name="email" class="form-control" placeholder="johndoe@fake.com" required="required" data-error="Valid email is required.">
+	 			                      <div class="help-block with-errors"></div>
+	 			                  </div>
+	 			              </div>
+
+	 			          </div>
+	 			          <div class="row">
+	 			              <div class="col-md-12">
+	 			                  <div class="form-group">
+	 			                      <label for="form_message">Message <span class="required">*</span></label>
+	 			                      <textarea id="form_message" name="message" class="form-control" placeholder="Please Leave a Message" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+	 			                      <div class="help-block with-errors"></div>
+	 			                  </div>
+	 			              </div>
+	 			              <div class="col-md-12">
+	 			                  <input type="submit" class="btn" value="Send message">
+	 			              </div>
+	 			          </div>
+
+	 			      </div>
+
+	 			  </form>
+				</aside>
 			</div>
 		</div>
 	</div>
-	<footer id="footer"></footer>
+	<footer id="footer">
+		<div class="container">
+			<p>Copyright 2018 | Website designed and developed by Dominic Groshong</p>
+		</div>
+	</footer>
 </body>
 </html>
