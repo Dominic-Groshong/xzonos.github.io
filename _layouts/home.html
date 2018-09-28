@@ -13,7 +13,22 @@ layout: default
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
+      <li class="clearfix">
+			<div class="left">
+			{% assign foundImage = 0 %}
+	      {% assign images = post.content | split:"<img " %}
+	      {% for image in images %}
+	        {% if image contains 'src' %}
+
+	            {% if foundImage == 0 %}
+	                {% assign html = image | split:"/>" | first %}
+	                <img {{ html }} />
+	                {% assign foundImage = 1 %}
+	            {% endif %}
+	        {% endif %}
+	      {% endfor %}
+			</div>
+			<div class="right">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
@@ -21,9 +36,9 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
           {{ post.excerpt }}
-        {%- endif -%}
+        
+		  </div>
       </li>
       {%- endfor -%}
     </ul>

@@ -3,3 +3,96 @@
 ---
 
 @import "minima";
+
+//
+// General Colors
+//
+$light: #c4c4c4;
+$medium: #727272;
+$dark: #292929;
+$even: #fcfcfc;
+$odd: #f5f5f5;
+
+//
+// Defaults
+//
+a{
+	color: $brand-color;
+	&:hover{
+		text-decoration: none !important;
+	}
+}
+
+.social-media-list a:hover .username{
+	text-decoration: none;
+}
+
+//
+// Homepage Blog Posts
+//
+.right,
+.right:after,
+.right:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+a.btn{
+	background: lighten($text-color, 20%);
+	padding: 10px 20px;
+	border-radius: 6px;
+	color: white;
+	font-weight: 700;
+	&:hover{
+		background: lighten($text-color, 10%);
+		text-decoration: none;
+	}
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.rss-subscribe{
+	display: none;
+}
+
+.left{
+	float: left;
+	width: 25%;
+}
+
+.right{
+	width: 75%;
+	float: right;
+	padding-left: 20px;
+}
+
+.post-list li{
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.site-footer {
+    background: $dark;
+    min-height: 100px;
+    margin-top: 20px;
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0px 500px 0px 500px $dark;
+	 a{
+		 color: white;
+
+		 &:visited{
+			 color: darken(white, 40%);
+		 }
+		 &:hover{
+			 color: $brand-color;
+		 }
+	 }
+}
