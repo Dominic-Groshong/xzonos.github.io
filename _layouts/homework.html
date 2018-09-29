@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="homework">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+	  {% for post in site.posts reversed %}
+	    {% if post.categories contains 'homework' %}
+	        {% assign count = count|plus:1 %}
+	        <div class="post_info col-4">
+				  <div class="clearfix">
+	 	 			{% assign foundImage = 0 %}
+	 	 	      {% assign images = post.content | split:"<img " %}
+	 	 	      {% for image in images %}
+	 	 	        {% if image contains 'src' %}
+
+	 	 	            {% if foundImage == 0 %}
+	 	 	                {% assign html = image | split:"/>" | first %}
+								 <div class="promo-img">
+									 <a class="post-link" href="{{ post.url | relative_url }}">
+									 	<img {{ html }} />
+									 </a>
+								 </div>
+	 	 	                {% assign foundImage = 1 %}
+	 	 	            {% endif %}
+	 	 	        {% endif %}
+	 	 	      {% endfor %}
+	 	         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+					<span class="post-meta">{{ post.date | date: date_format }} | {{ post.author }}</span>
+	 	         <h2>
+	 	           <a class="post-link" href="{{ post.url | relative_url }}">
+	 	             {{ post.title | escape }}
+	 	           </a>
+				  </h2>
+
+	 	           {{ post.excerpt }}
+
+					  <a class="post-link btn inverse" href="{{ post.url | relative_url }}">
+	 	             Read Full Blog Post
+	 	           </a>
+
+	 	       </div>
+	        </div>
+	    {% endif %}
+	  {% endfor %}
+  {% endif %}
+</div>
