@@ -20,7 +20,7 @@ $headline: 'Gudea', Helvetica, Arial, "Lucida Grande", sans-serif;
 
 $bodyCopy: 'Roboto', Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$radius: 0;
+$radius: 5px;
 
 //
 // Core HTML
@@ -137,6 +137,51 @@ hr{
 
 .wrapper{
 	max-width: 1200px;
+}
+
+
+//
+// Menu
+//
+
+.side-content .nav{
+	background: $light;
+	@include border-radius($radius);
+	overflow: hidden;
+
+	.nav-item{
+		border-bottom: 1px solid white;
+		&:last-of-type{
+			border-bottom: none;
+		}
+	}
+
+	.nav-link{
+		padding: 10px 10px;
+		&:hover{
+			background: $cp1;
+			color: white;
+		}
+	}
+}
+
+nav{
+	background: $cp1;
+}
+.nav{
+	margin-left: 0;
+
+}
+
+.nav-link{
+	color: white;
+	&:visited{
+		color: white;
+	}
+
+	&.active{
+		background: blue;
+	}
 }
 
 //

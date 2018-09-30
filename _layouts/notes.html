@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="post">
+
+	<header class="post-header">
+		<h1 class="post-title">{{ page.title | escape }}</h1>
+	</header>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="side-content col-sm-12 col-md-6 col-lg-3">
+				<ul class="nav flex-column">
+					<li class="nav-item"><a href="#git" class="nav-link">GIT</a></li>
+					<li class="nav-item"><a href="#bootstrap" class="nav-link">BootStrap</a></li>
+					<li class="nav-item"><a href="#javascript" class="nav-link">JavaScript / jQuery</a></li>
+					<li class="nav-item"><a href="#bootstrap" class="nav-link">BootStrap</a></li>
+					<li class="nav-item"><a href="#cSharp" class="nav-link">C#</a></li>
+					<li class="nav-item"><a href="#http" class="nav-link">HTTP</a></li>
+					<li class="nav-item"><a href="#aspNet" class="nav-link">ASP.NET</a></li>
+				</ul>
+			</div>
+
+			<div class="post-content col-sm-12 col-md-6 col-lg-9">
+				{{ content }}
+			</div>
+
+
+		</div>
+	</div>
+
+</article>

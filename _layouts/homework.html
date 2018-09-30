@@ -13,7 +13,7 @@ layout: default
 	  {% for post in site.posts reversed %}
 	    {% if post.categories contains 'homework' %}
 	        {% assign count = count|plus:1 %}
-	        <div class="post_info col-4">
+	        <div class="post_info col-sm-2 col-lg-4">
 				  <div class="clearfix">
 	 	 			{% assign foundImage = 0 %}
 	 	 	      {% assign images = post.content | split:"<img " %}
