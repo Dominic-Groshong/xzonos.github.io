@@ -1,49 +1,45 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<body>
 
-  {{ content }}
+  {%- include header.html -%}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li class="clearfix">
-			<div class="left">
-			{% assign foundImage = 0 %}
-	      {% assign images = post.content | split:"<img " %}
-	      {% for image in images %}
-	        {% if image contains 'src' %}
+  <section class="bgimage">
+    <img src="/assets/imgs/keyboard.jpg" class="img-fluid" alt="Keyboard on top of a book.">
+    <div class="caption">
+      <h1>Stay a while</h1>
+      <h2>and Listen</h2>
+    </div>
+  </section>
 
-	            {% if foundImage == 0 %}
-	                {% assign html = image | split:"/>" | first %}
-	                <img {{ html }} />
-	                {% assign foundImage = 1 %}
-	            {% endif %}
-	        {% endif %}
-	      {% endfor %}
-			</div>
-			<div class="right">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
+  <div class="container">
+
+    <div class="home">
+      {%- if page.title -%}
+      <h1 class="page-heading">{{ page.title }}</h1>
+      {%- endif -%}
+
+      {{ content }}
+
+
+      {%- if site.posts.size > 0 -%}
+      <h2 class="post-list-heading">{{ page.list_title | default: "Recent Posts" }}</h2>
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+        <li>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        </h3>
-          {{ post.excerpt }}
-        
-		  </div>
-      </li>
-      {%- endfor -%}
-    </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+  </div>
+  {%- include footer.html -%}
+</body>
 
-</div>
+</html>
