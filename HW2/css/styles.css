@@ -238,12 +238,14 @@ aside h1{
 /**********************
 			Table  Elements
 ***********************/
-.left{
-	padding-right: 20px;
+table{
+	margin-bottom: 10px;
 }
 
-.right{
-	padding-left: 20px;
+caption{
+	padding: 10px;
+	background: black;
+	color: white;
 }
 
 /***********************
