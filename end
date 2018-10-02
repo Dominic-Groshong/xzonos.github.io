@@ -1,0 +1,23 @@
+*   [33mcd6dcbc[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Merge branch 'master' of https://github.com/xzonos/xzonos.github.io
+[31m|[m[32m\[m  
+[31m|[m * [33mdc9280d[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Added homepage banner; removed all but title link to posts; updated homepage layout.
+[31m|[m * [33m36d7207[m Added bootstrap, reworked menu, added side-nav and content to cheat sheet
+* [32m|[m [33m82e7d74[m Adding notes; turn into a branch
+[32m|[m[32m/[m  
+* [33m87c8b7b[m Adding images back
+* [33mc5654a3[m Testing image breaking
+* [33me87583c[m Created homework link; pulls blog posts with homework tag.
+* [33m7be87d9[m Shitposted the about page until I have time to get to it.
+* [33mf8dd926[m Added excerpt and images to blog listing. Worked on SCSS styles to customize theme
+* [33m9201ccc[m Finished HTML Site
+* [33md369987[m Found out the new theme did now work with pages, went back to orignial theme
+* [33me340f81[m New blog theme
+* [33m95fca7d[m Adding Jekyll
+* [33m4be17f7[m Added contact page and added footer resource and contact resource:
+* [33m34ef2ac[m jQuerry Imports working, added logo and menu
+* [33m87344a1[m Testing jquery loadHTML includes
+* [33md8bffac[m Added bootstrap menu
+* [33m324ed42[m added standard Hello World to test pages
+* [33mcad31d5[m Cant use php which sucks, switching to pure html
+* [33mde33e41[m Inital setup of simple index and php header and footer
+* [33m7e56f28[m Initial commit
