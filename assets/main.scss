@@ -20,7 +20,7 @@ $headline: 'Gudea', Helvetica, Arial, "Lucida Grande", sans-serif;
 
 $bodyCopy: 'Roboto', Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$radius: 0;
+$radius: 5px;
 
 //
 // Core HTML
@@ -68,7 +68,13 @@ h2{
 	font-weight: 400;
 	margin: 0 0 .25em 0 ;
 	color: $cp4;
-
+	.post-link{
+		@extend h2;
+		margin-bottom: .5em;
+		&:hover{
+			color: $cp5;
+		}
+	}
 }
 
 h3{
@@ -137,6 +143,89 @@ hr{
 
 .wrapper{
 	max-width: 1200px;
+}
+
+
+//
+// Menu
+//
+
+.side-content .nav{
+	background: $light;
+	@include border-radius($radius);
+	overflow: hidden;
+
+	.nav-item{
+		border-bottom: 1px solid white;
+		&:last-of-type{
+			border-bottom: none;
+		}
+	}
+
+	.nav-link{
+		padding: 10px 10px;
+		&:hover{
+			background: $cp1;
+			color: white;
+		}
+	}
+}
+
+nav{
+	background: $cp1;
+}
+.nav{
+	margin-left: 0;
+
+}
+
+.nav-link{
+	color: white;
+	padding: 12px 20px;
+	&:visited{
+		color: white;
+	}
+
+	&:hover{
+		background: $cp2;
+		color: white;
+	}
+}
+
+
+//
+// Banner
+//
+
+.bgimage{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.caption {
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 3px 3px 11px rgba(0, 0, 0, 1);
+
+	h1{
+		@include font-size(60px);
+	}
+
+	h2{
+		@include font-size(50px);
+	}
+
+	h1, h2{
+		color: white !important;
+		margin: 0;
+	}
 }
 
 //
@@ -218,10 +307,6 @@ a.btn{
 	}
 }
 
-h2{
-	margin: 0;
-}
-
 .post-meta{
 	margin-bottom: 0;
 	display: block;
@@ -236,6 +321,10 @@ h2{
 
 img{
 	width: 100%;
+}
+
+.highlighter-rouge .highlight, pre, code{
+	background-color: $odd;
 }
 
 .hide{
