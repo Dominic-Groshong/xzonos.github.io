@@ -4,15 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Gudea:400,700|Roboto+Slab:400,700|Roboto:300,400,400i,700');
 @import "reset.css";
 
-@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css"');
-
 body{
 	color: #666;
 	font-size: 16px;
+	font-family: "Lucida Grande", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Roboto', Helvetica, Arial, "Lucida Grande", sans-serif;;
+	font-family: 'Roboto Slab', Helvetica, Arial;
 	font-weight: 300;
 }
 
@@ -28,7 +27,7 @@ h1{
 h2{
 	font-size: 28px;
 	font-weight: 400;
-	margin: 0 0 .25em 0;
+	margin: 0 0 20px 0;
 }
 
 h3{
@@ -106,108 +105,9 @@ h6{
 
 }
 
-
-/******************
-		Menu Styles
-*******************/
-#main-menu{
-	background: #425563;
+#netWorth{
+	padding: 20px 0;
 }
-
-.navbar{
-		padding: 0 !important;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link{
-	color: white;
-	padding: 13px 20px !important;
-}
-
-.nav-item a:hover{
-	color: white;
-	background: #52748c;
-}
-
-.dropdown-item{
-	color: #666;
-}
-
-/*************
-		Banner
-***************/
-.bgimage img{
-	width: 100%;
-	height: auto;
-}
-
-.bgimage{
-	position: relative;
-	margin-bottom: 20px;
-}
-
-.caption {
-	color: white !important;
-	text-transform: uppercase;
-	padding: 20px;
-	width: 100%;
-	text-align: center;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.caption h1{
-	color: white !important;
-}
-
-/*********************
-			Social Media
-*********************/
-
-.social-media{
-	margin-top: 60px;
-	margin-bottom: 20px;
-}
-
-
-.social-media a{
-	text-indent: -99999px;
-	display: block;
-	opacity: .5;
-}
-
-.social-media li{
-	float: left;
-	padding-left: 20px;
-}
-
-.social-media a:hover{
-	opacity: .75;
-}
-
-.facebook a{
-	background: url(../img/facebook.png) no-repeat center center;
-	height: 40px;
-	width: 40px;
-	background-size: 40px;
-}
-
-.intagram a{
-	background: url(../img/instagram.png) no-repeat center center;
-	height: 40px;
-	width: 40px;
-	background-size: 40px;
-}
-
-.portfolio a{
-	background: url(../img/goback.png) no-repeat center center;
-	height: 40px;
-	width: 40px;
-	background-size: 40px;
-}
-
-
 /*********************
 			Sidebar
 *********************/
@@ -235,11 +135,19 @@ aside h1{
 		color: white;
 }
 
+.mb-2, .my-2{
+	margin-bottom: 0 !important;
+}
+
 /**********************
-			Table  Elements
+			  Elements
 ***********************/
 table{
-	margin-bottom: 10px;
+	margin: 0 0 20px;
+}
+
+table td{
+	vertical-align: middle !important;
 }
 
 caption{
@@ -247,6 +155,8 @@ caption{
 	background: black;
 	color: white;
 }
+
+
 
 /***********************
 				Footer
