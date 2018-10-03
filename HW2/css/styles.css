@@ -139,6 +139,31 @@ aside h1{
 	margin-bottom: 0 !important;
 }
 
+.checkbox h2{
+	margin: 0;
+}
+
+.form-group{
+	margin: 0;
+}
+
+.checkbox{
+	margin: 0;
+	border-bottom: 1px solid #f4f4f4;
+	padding: 20px 0;
+}
+
+.well{
+	padding: 20px;
+	background: #fafafa;
+}
+
+.well table{
+	margin-bottom: 0;
+}
+.table .thead-dark th{
+	background: #666;
+}
 /**********************
 			  Elements
 ***********************/
