@@ -64,6 +64,7 @@ function findBusiness() {
 
   return total;
 }
+<<<<<<< HEAD
 
 function findUseAssets() {
   var arr = document.getElementsByName('useAsset');
@@ -87,3 +88,5 @@ function computeNetWorth() {
 
   document.getElementById("netWorth").innerHTML = "<h3>Net Worth: " + totalAssets + "</h3>";
 }
+=======
+>>>>>>> 69bfa88039ad1cdd6209c8dd5a518dec385f141f
