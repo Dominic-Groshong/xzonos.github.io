@@ -1,3 +1,17 @@
+
+
+$(document).ready(function() {
+	$( function() {
+		$( "#accordion" ).accordion();
+	} );
+});
+
+var cashArray = new Array();
+
+$('input[type=number]').each(fuction(){
+	cashArray.push($(this).val())
+});
+
 function findCash(){
 	var arr = document.getElementsByName('cash');
 	var total = 0;
@@ -64,20 +78,3 @@ function computeNetWorth(){
 
 	document.getElementById("netWorth").innerHTML = "<h3>Net Worth: " + totalAssets + "</h3>";
 }
-
-
-
-
-$('.collapse').collapse();
-
-$('.panel-heading h4 a input[type=checkbox]').on('click', function(e) {
-    e.stopPropagation();
-    $(this).parent().trigger('click');   // <---  HERE
-});
-
-$('#collapseOne').on('show.bs.collapse', function(e) {
-    if(!$('.panel-heading h4 a input[type=checkbox]').is(':checked'))
-    {
-        return false;
-    }
-});
