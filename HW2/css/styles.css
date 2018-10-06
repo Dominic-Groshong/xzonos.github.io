@@ -84,6 +84,39 @@ h6{
 #netWorth .thanos{
 	color: purple;
 }
+
+/*********************
+			Social Media
+*********************/
+
+.social-media{
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+
+.social-media a{
+	text-indent: -99999px;
+	display: block;
+	opacity: .5;
+}
+
+.social-media li{
+	float: left;
+	padding-left: 20px;
+}
+
+.social-media a:hover{
+	opacity: .75;
+}
+
+.portfolio a{
+	background: url(../img/goback.png) no-repeat center center;
+	height: 40px;
+	width: 40px;
+	background-size: 40px;
+}
+
 /*********************
 			Sidebar
 *********************/
