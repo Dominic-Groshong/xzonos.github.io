@@ -57,56 +57,32 @@ h6{
 
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
-.body-copy ol {
-  list-style: none;
-  counter-reset: counter;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-.body-copy ol li {
-  counter-increment: counter;
-  display: flex;
-  width: 50%;
-  font-size: 1em;
-  margin-bottom: 0.5rem;
-}
-.body-copy ol li::before {
-  content: "0" counter(counter);
-  font-weight: bold;
-  font-size: 3rem;
-  margin-right: 0.5rem;
-  font-family: 'Abril Fatface', serif;
-  line-height: 1;
-  color: #FEC652;
-}
-
-.body-copy ul{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.body-copy ul li{
-	list-style: none;
-	display: flex;
-   width: 50%;
-	margin-bottom: 20px;
-}
-
-.body-copy ul li::before{
-	content: "";
-	background: #FEC652;
-	height: 20px;
-	width: 20px;
-	padding: 20px;
-	margin-right: 20px;
-	border-radius: 100%;
-
-}
 
 #netWorth{
 	padding: 20px 0;
+}
+
+#netWorth li{
+	padding: 10px 0;
+	font-size: 18px;
+	color: #d2d2d2;
+}
+
+#netWorth li:last-of-type{
+	font-size: 33px;
+	font-weight: 700;
+}
+
+#netWorth .negitive{
+	color: red;
+}
+
+#netWorth .positive{
+	color: green;
+}
+
+#netWorth .thanos{
+	color: purple;
 }
 /*********************
 			Sidebar
