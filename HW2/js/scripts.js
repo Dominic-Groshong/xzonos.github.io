@@ -1,24 +1,20 @@
-function findCash2() {
-  $('.price').blur(
-    function() {
-      var total = 0;
+// Enables accordion functionality while allowing more than one accordion "tab" open at the same time.
+$( document ).ready(function() {
 
-		$('.price').each(
-        function() {
-          sum += Number($(this).val());
-        });
-    });​​​​​​​​​
-};
+	$('#accordion').accordion({ collapsible:true, active:false, autoHeight: false, heightStyle:"content", disabled:true});
 
-$('#submit').click(findCash2());
+	$('#accordion h3.ui-accordion-header').click(function(){
+	      $(this).next().slideToggle();
+	});
 
-$(document).ready(){
-	$(function(){
-    $('#submit').click(function() {
-        alert("Hello");
-    });
+	$('.accordion-expand-all').click(function(){
+	      $('#accordion h3.ui-accordion-header').next().slideDown();
+	});
+
 });
-}
+
+
+// Form Stuff
 
 
 function findCash() {
@@ -64,7 +60,6 @@ function findBusiness() {
 
   return total;
 }
-<<<<<<< HEAD
 
 function findUseAssets() {
   var arr = document.getElementsByName('useAsset');
@@ -88,5 +83,3 @@ function computeNetWorth() {
 
   document.getElementById("netWorth").innerHTML = "<h3>Net Worth: " + totalAssets + "</h3>";
 }
-=======
->>>>>>> 69bfa88039ad1cdd6209c8dd5a518dec385f141f
