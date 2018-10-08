@@ -1,19 +1,14 @@
 <!doctype html>
 
 <html>
+
 <head>
 	<meta charset="utf-8">
 
 	<title>CS460 | Home</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
-	<script src="js/jquery.min.js" ></script>
 </head>
 
 <body>
@@ -26,61 +21,612 @@
 				</div>
 				<div class="col social-media">
 					<ul>
-						<li class="facebook"><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-						<li class="intagram"><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
 						<li class="portfolio"><a href="/homework">Portfolio</a></li>
 					</ul>
 			</div>
 		</div>
 	</header>
 
-	<section id="main-menu">
-		<div class="container">
-			<nav class="navbar navbar-expand-lg">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="mainMenuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="history.html">History</a>
-					</div>
-
-					</li>
-					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
-
-	<section class="bgimage">
-			<img src="img/index.jpg" class="img-fluid" alt="Two beers on a counter.">
-					<div class="caption">
-						<h1>We made drinking our job.</h5>
-					</div>
-	</section>
-
 	<div class="container body-copy">
 		<div class="row">
-			<div class="col">
-				<table>
-					<tr >
-						<td class="left"><img src="img/historyBanner.jpg" class="img-fluid" alt="Two beer bottles toasting."></td>
-						<td class="left"><img src="img/contact.jpg" class="img-fluid" alt="Two beer bottles toasting."></td>
-					</tr>
+			<div class="col-lg-12">
 
-					<tr >
-						<td class="right">
-							<h1>Our Past Defines Us</h1>
-							<p>Sometimes a corona light from a freight train panics, but some Bacardi Silver about the Keystone always can be kind to a mating ritual! Sometimes a shabby sake bomb self-flagellates.</p>
-							<a class="btn" href="history.html">Read More</a>
-						</td>
-						<td class="right">
-							<h1>Reach out, we dont bite</h1>
-							<p>Sometimes a corona light from a freight train panics, but some Bacardi Silver about the Keystone always can be kind to a mating ritual! Sometimes a shabby sake bomb self-flagellates.</p>
-							<a class="btn" href="history.html">Read More</a>
-						</td>
-					</tr>
-				</table>
+				<div id="accordion">
+					<h3>Cash and Cash Equivilent Assets</h3>
+					<div class="well">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Assets</th>
+									<th scope="col">Current Value</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>Checking Accounts</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="cash" id="checking" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Savings Account</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="cash" id="savings" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Money market accounts</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="cash" id="moneyMarket" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Savings bonds</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="cash" id="savingsBond" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>CD's</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="cash" id="cd" />
+									</div>
+								</td>
+							</tr>
+
+						</table>
+					</div>
+
+					<h3>Invested Assets</h3>
+
+					<div class="well">
+						<table class="table">
+
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Assets</th>
+									<th scope="col">Current Value</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>Brokerage</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="invested" id="brokerage" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Other</span>
+										</div>
+										<input class="form-control" type="text" name="accountOther" id="accountOther" />
+									</div>
+								</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="invested" id="accountOtherValue" />
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3>Retirement Accounts</h3>
+
+					<div class="well">
+						<table class="table">
+
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Assets</th>
+									<th scope="col">Current Value</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>IRA</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="ira" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Roth IRA</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="rothIRA" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>401(k) or 403(b)</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="fourOneK" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>SEP-IRA</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="sepIRA" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Keogh or other qualified plan</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="keogh" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Pension (vested benefit)</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="pension" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Annuity (accumulated value)</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="retirement" id="annuity" />
+									</div>
+								</td>
+							</tr>
+
+						</table>
+					</div>
+
+					<h3>Business ownership Interests</h3>
+
+					<div class="well">
+						<table class="table">
+
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Assets</th>
+									<th scope="col">Current Value</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>Real estate (rental property or land)</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="realEstate" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Sole proprietorship</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="proprietorship" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Partnership</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="partnership" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>C Coporation</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="cCorp" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>S Coporation</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="sCorp" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Limited liability company</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="llc" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Other</span>
+										</div>
+										<input class="form-control" type="text" name="businessOther" id="investOther" />
+									</div>
+								</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="business" id="investOtherValue" />
+									</div>
+								</td>
+							</tr>
+
+						</table>
+					</div>
+
+
+					<h3>Use Assets</h3>
+
+					<div class="well">
+						<table class="table">
+
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Assets</th>
+									<th scope="col">Current Value</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>Principle home</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="principleHome" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Vacation home</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="vacationHome" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Cars, trucks, boats</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="vehicles" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Home furnishings</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="furnishings" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Art, antiques, coins collectibles</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="collectivles" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Jewelry, furs</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="jewelry" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Other</span>
+										</div>
+										<input class="form-control" type="text" name="useAssetOther" id="useAssetOther" />
+									</div>
+								</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="useAsset" id="useAssetOtherValue" />
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3>Current Liabilities</h3>
+
+					<div class="well">
+						<table class="table">
+
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Liability</th>
+									<th scope="col">Current Due</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>Credit card balances</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="currentLib" id="ccBalance" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Estimated income tax owed</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="currentLib" id="incomeTax" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Other</span>
+										</div>
+										<input class="form-control" type="text" name="useAssetOther" id="currentLiabilityOther" />
+									</div>
+								</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="currentLib" id="currentLiabilityOtherValue" />
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3>Long-Term Liabilities</h3>
+
+					<div class="well">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Liability</th>
+									<th scope="col">Current Due</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td>Home mortgage</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="mortgage" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Home equity loan</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="equityLoan" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Mortgages on rental properties</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="rentalMortgages" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Car loans</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="carLoan" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Student loans</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="studentLoan" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Life insurance policy loans</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="lifeInsurance" />
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Other</span>
+										</div>
+										<input class="form-control" type="text" name="useAssetOther" id="longTermOther" />
+									</div>
+								</td>
+								<td>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+											<span class="input-group-text">$</span>
+										</div>
+										<input class="form-control" type="number" name="longLib" id="longTermOtherValue" />
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<button type="button" class="btn btn-lg" onclick="computeNetWorth()">Get Net Worth</button>
+
+				<ul id="netWorth"></ul>
+
 			</div>
 		</div>
 	</div>
@@ -90,7 +636,12 @@
 			<p>Copyright 2018 | Website designed and developed by Dominic Groshong</p>
 		</div>
 	</footer>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
