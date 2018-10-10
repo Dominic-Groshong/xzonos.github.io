@@ -3,3 +3,7 @@
 Gemfile.lock
 _site
 *.gem
+
+HW3/*
+
+!HW3/*.cs
