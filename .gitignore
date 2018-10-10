@@ -4,6 +4,15 @@ Gemfile.lock
 _site
 *.gem
 
-HW3/*
+#ignore Java files
 
-!HW3/*.cs
+HW3/java/
+
+#ignore files except .cs files
+
+HW3/javaConvert/*
+HW3/javaConvert/javaConvert/*
+
+
+!HW3/javaConvert/javaConvert
+!HW3/javaConvert/javaConvert/*.cs
