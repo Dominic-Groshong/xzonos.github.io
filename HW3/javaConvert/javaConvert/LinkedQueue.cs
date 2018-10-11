@@ -16,24 +16,65 @@ namespace javaConvert
       rear = null;
     }
 
-    public T Push(T Element)
+    public T Push(T element)
     {
-      if(Element == null)
+      if(element == null)
       {
-        throw new NullReferenceException;
+        throw new NullReferenceException();
       }
+      else if( isEmpty())
+      {
+        Node<T> tmp = new Node<T>(element, null);
+        rear = front = tmp;
+      }
+      else
+      {
+        Node<T> tmp = new Node<T>(element, null);
+        rear.Next = tmp;
+        rear = tmp;
+      }
+
+      return element;
     }
 
     public T Pop()
     {
-      throw new NotImplementedException();
+      T tmp = default(T);
+
+      if ( isEmpty())
+      {
+        throw new QueueUnderflowException("The queue was empty when pop was invoiked.");
+      }
+
+      else if( front == rear)
+      { // one item in queue
+        tmp = front.Data;
+        front = null;
+        rear = null;
+      }
+
+      else
+      {
+        tmp = front.Data;
+        front = front.Next;
+      }
+
+      return tmp;
     }
 
  
 
-    public bool IsEmpty()
+    public bool isEmpty()
     {
-      throw new NotImplementedException();
+      if ( front == null && rear == null)
+      {
+        return true;
+      }
+
+      else
+      {
+        return false;
+      }
     }
   }
 }

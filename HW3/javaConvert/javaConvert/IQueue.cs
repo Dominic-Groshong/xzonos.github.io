@@ -14,9 +14,9 @@ namespace javaConvert
     /// <summary>
     /// Add an element to the rear of the queue
     /// </summary>
-    /// <param name="Element">Element to be added</param>
+    /// <param name="element">Element to be added</param>
     /// <returns>the element that was enqueued</returns>
-    T Push(T Element);
+    T Push(T element);
 
     /// <summary>
     /// remove element from queue, will throw error if empty
@@ -28,7 +28,7 @@ namespace javaConvert
     /// Test if queue is empty
     /// </summary>
     /// <returns>true if empty; false otherwise.</returns>
-    Boolean IsEmpty();
+    Boolean isEmpty();
 
   }
 }
