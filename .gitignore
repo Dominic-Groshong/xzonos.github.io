@@ -10,9 +10,9 @@ HW3/java/
 
 #ignore files except .cs files
 
-HW3/javaConvert/*
-HW3/javaConvert/javaConvert/*
+HW3/conversion/*
+HW3/conversion/conversion/*
 
 
-!HW3/javaConvert/javaConvert
-!HW3/javaConvert/javaConvert/*.cs
+!HW3/conversion/conversion
+!HW3/conversion/conversion/*.cs
