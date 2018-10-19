@@ -1,0 +1,21 @@
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<h2>Color Mixer</h2>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+  @Html.Label("First Color")
+  @Html.TextBox("firstColor", null, new { @class = "form-control", @placeholder ="#FFFFFF" })
+
+  <br />
+
+  @Html.Label("Second Color")
+  @Html.TextBox("secondColor", null, new { @class = "form-control", @placeholder = "#EFEFEF" })
+
+  <br />
+
+  <button class="btn btn-primary" type="submit">Mix it up!</button>
+}
