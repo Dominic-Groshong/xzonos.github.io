@@ -8,7 +8,7 @@
 @using (Html.BeginForm(FormMethod.Post))
 {
   @Html.Label("First Color")
-  @Html.TextBox("firstColor", null, new { @class = "form-control", @placeholder ="#FFFFFF" })
+  @Html.TextBox("firstColor", null, new { @class = "form-control", @placeholder = "#FFFFFF" })
 
   <br />
 
@@ -19,3 +19,5 @@
 
   <button class="btn btn-primary" type="submit">Mix it up!</button>
 }
+
+@ViewBag.RenderMix
