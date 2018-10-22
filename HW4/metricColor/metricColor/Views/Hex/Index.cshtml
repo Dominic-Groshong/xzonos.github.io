@@ -3,17 +3,17 @@
   ViewBag.Title = "Index";
 }
 
-<h2>Color Mixer</h2>
+<h2>Hex Color Mixer</h2>
 
 @using (Html.BeginForm(FormMethod.Post))
 {
-  @Html.Label("First Color")
-  @Html.TextBox("firstColor", null, new { @class = "form-control", @placeholder = "#FFFFFF" })
+  @Html.Label("First Hex Color")
+  @Html.TextBox("firstColor", null, new { @class = "form-control", placeholder = "#FFFFFF", pattern = "^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$", required = "required" })
 
   <br />
 
-  @Html.Label("Second Color")
-  @Html.TextBox("secondColor", null, new { @class = "form-control", @placeholder = "#EFEFEF" })
+  @Html.Label("Second Hex Color")
+  @Html.TextBox("secondColor", null, new { @class = "form-control", placeholder = "#EFEFEF", pattern = "^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$", required = "required" })
 
   <br />
 

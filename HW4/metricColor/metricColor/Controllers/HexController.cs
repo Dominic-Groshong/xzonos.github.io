@@ -16,26 +16,28 @@ namespace metricColor.Controllers
     }
 
     [HttpPost]
-    public ActionResult Index(String userinput, String userInput2)
+    public ActionResult Index(String firstColor, String secondColor)
     {
-      try
+      // Check if values are empty (should never run due to input validation)
+      if (String.IsNullOrEmpty(firstColor) || String.IsNullOrEmpty(secondColor))
       {
-        // Get the colors from the submited form.
-        Color firstColor = ColorTranslator.FromHtml(Request["firstColor"]);
-        Color secondColor = ColorTranslator.FromHtml(Request["secondColor"]);
-
-        //Combine the two colors to create a third
-        Color mixedColor = mixColor(firstColor, secondColor);
-
-        // Run the colors into the viewbag.
-        renderMix(firstColor, secondColor, mixedColor);
-
-        // Return the view
+        ViewBag.RenderMix = "<h3>Chill, back up a miniute and fill out the form</h3>";
         return View();
       }
 
-      catch (NullReferenceException e)
+      else
       {
+        // Get the colors from the submited form.
+        Color colorOne = ColorTranslator.FromHtml(firstColor);
+        Color colorTwo = ColorTranslator.FromHtml(secondColor);
+
+        //Combine the two colors to create a third
+        Color mixedColor = mixColor(colorOne, colorTwo);
+
+        // Run the colors into the viewbag.
+        renderMix(colorOne, colorTwo, mixedColor);
+
+        // Return the view
         return View();
       }
 
@@ -62,9 +64,11 @@ namespace metricColor.Controllers
     private void renderMix(Color colorOne, Color colorTwo, Color colorThree)
     {
       ViewBag.RenderMix =
-              "<div style='background: rgb(" + colorOne.R + "," + colorOne.G + "," + colorOne.B + "); height: 80px; width: 80px; '></div>" + " + "
-            + "<div style='background: rgb(" + colorTwo.R + "," + colorTwo.G + "," + colorTwo.B + "); height: 80px; width: 80px; '></div>" + " = "
-            + "<div style='background: rgb(" + colorThree.R + "," + colorThree.G + "," + colorThree.B + "); height: 80px; width: 80px; '></div>";
+              "<div class='colorbox' style='background: rgb(" + colorOne.R + "," + colorOne.G + "," + colorOne.B + ");'></div>"
+            + "<div class='colorbox text'><p>+</p></div>"
+            + "<div class='colorbox' style='background: rgb(" + colorTwo.R + "," + colorTwo.G + "," + colorTwo.B + ");'></div>"
+            + "<div class='colorbox text'><p>=</p></div>"
+            + "<div class='colorbox' style='background: rgb(" + colorThree.R + "," + colorThree.G + "," + colorThree.B + ");'></div>";
     }
   }
 }
