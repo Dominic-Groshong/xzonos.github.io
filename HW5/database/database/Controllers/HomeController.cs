@@ -13,5 +13,9 @@ namespace database.Controllers
       return View();
     }
 
+    public ActionResult FormRequest()
+    {
+      return View();
+    }
   }
 }
