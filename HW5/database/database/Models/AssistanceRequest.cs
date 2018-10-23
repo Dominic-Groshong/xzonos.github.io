@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace database.Models
 {
+
   public class AssistanceRequest
   {
     public string Firstname { get; set; }
@@ -15,5 +16,6 @@ namespace database.Models
     public string Building { get; set; }
     public int Suite { get; set; }
     public string Message { get; set; }
+    public bool Access { get; set; }
   }
 }

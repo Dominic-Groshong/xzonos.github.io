@@ -1,11 +1,34 @@
 
+@model database.Models.AssistanceRequest
 @{
-    ViewBag.Title = "FormRequest";
+  ViewBag.Title = "FormRequest";
 }
 
 <h2>Maintenance Request</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(FormMethod.Post))
 {
+  @Html.LabelFor(model => Model.Firstname)
+  @Html.TextBoxFor(model => Model.Firstname)
+
+  @Html.LabelFor(model => Model.LastName)
+  @Html.TextBoxFor(model => Model.LastName)
+
+  @Html.LabelFor(model => Model.Phone)
+  @Html.TextBoxFor(model => Model.Phone)
+
+  @Html.LabelFor(model => Model.Building)
+  @Html.TextBoxFor(model => Model.Building)
+
+  @Html.LabelFor(model => Model.Suite)
+  @Html.TextBoxFor(model => Model.Suite)
+
+  @Html.LabelFor(model => Model.Message)
+  @Html.TextBoxFor(model => Model.Message)
+
+  @Html.LabelFor(model => Model.Access)
+  @Html.TextBoxFor(model => Model.Access)
+
+<button class = "btn btn-primary" type="submit">Submit Request</button>
 
 }
