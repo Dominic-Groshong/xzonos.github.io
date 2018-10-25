@@ -4,11 +4,12 @@
   ViewBag.Title = "FormRequest";
 }
 
+<div class="row section-header">
+  <h2>Submit Request</h2>
+</div>
+
 @using (Html.BeginForm(FormMethod.Post))
 {
-  <div class="row section-header">
-    <h2>Submit Request</h2>
-  </div>
   <div class="row">
     <div class="col-sm-12 col-md-4">
       @Html.LabelFor(model => Model.FirstName)
@@ -29,7 +30,16 @@
     <div class="col-sm-12 col-md-6">
 
       @Html.LabelFor(model => Model.Building)
-      @Html.TextBoxFor(model => Model.Building, new { @class = "form-control" })
+      @Html.DropDownListFor(model => Model.Building, new List<SelectListItem>
+      {
+         new SelectListItem{ Text="Hyrule Hills", Value = "Hyrule Hills" },
+         new SelectListItem{ Text="Lon Lon Lounge", Value = "Lon Lon Lounge" },
+         new SelectListItem{ Text="Death Mountain Condos", Value = "Death Mountain Condos" },
+         new SelectListItem{ Text="Gerudo Highrise", Value = "Gerudo Highrise" },
+         new SelectListItem{ Text="Zora's Mansion", Value = "Zora's Mansion" },
+         new SelectListItem{ Text="Kokiri Gardens", Value = "Kokiri Gardens" },
+         new SelectListItem{ Text="Hylia Court", Value = "Hylia Court" },
+      }, new { @class="form-control" })
     </div>
     <div class="col-sm-12 col-md-6">
       @Html.LabelFor(model => Model.Suite)
@@ -43,13 +53,17 @@
     </div>
   </div>
 
-
-  <div>
-    @Html.CheckBoxFor(model => Model.Access)
-    @Html.LabelFor(m => m.Access)
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <button class="btn btn-primary" type="submit">Submit Request</button>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      @Html.CheckBoxFor(model => Model.Access)
+      @Html.LabelFor(m => m.Access)
+    </div>
   </div>
 
 
-  <button class="btn btn-primary" type="submit">Submit Request</button>
+  
 
 }
