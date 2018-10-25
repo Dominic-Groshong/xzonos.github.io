@@ -9,13 +9,22 @@ namespace database.Models
 
   public class AssistanceRequest
   {
-    public string Firstname { get; set; }
+    [Display(Name = "First Name")]
+    public string FirstName { get; set; }
+
+    [Display(Name = "Last Name")]
     public string LastName { get; set; }
+
     [Phone]
     public string Phone { get; set; }
+
     public string Building { get; set; }
+
     public int Suite { get; set; }
+
     public string Message { get; set; }
+
+    [Display(Name = "Select here to give permission for the landlord or representitive to enter your suite to preform the requested maintenance. We wil call first.")]
     public bool Access { get; set; }
   }
 }

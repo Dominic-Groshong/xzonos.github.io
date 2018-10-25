@@ -4,31 +4,52 @@
   ViewBag.Title = "FormRequest";
 }
 
-<h2>Maintenance Request</h2>
-
 @using (Html.BeginForm(FormMethod.Post))
 {
-  @Html.LabelFor(model => Model.Firstname)
-  @Html.TextBoxFor(model => Model.Firstname)
+  <div class="row section-header">
+    <h2>Submit Request</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      @Html.LabelFor(model => Model.FirstName)
+      @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="col-sm-12 col-md-4">
+      @Html.LabelFor(model => Model.LastName)
+      @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
+    </div>
+    <div class="col-sm-12 col-md-4">
+      @Html.LabelFor(model => Model.Phone)
+      @Html.TextBoxFor(model => Model.Phone, new { @class = "form-control" })
+    </div>
+  </div>
 
-  @Html.LabelFor(model => Model.LastName)
-  @Html.TextBoxFor(model => Model.LastName)
+  <div class="row">
 
-  @Html.LabelFor(model => Model.Phone)
-  @Html.TextBoxFor(model => Model.Phone)
+    <div class="col-sm-12 col-md-6">
 
-  @Html.LabelFor(model => Model.Building)
-  @Html.TextBoxFor(model => Model.Building)
+      @Html.LabelFor(model => Model.Building)
+      @Html.TextBoxFor(model => Model.Building, new { @class = "form-control" })
+    </div>
+    <div class="col-sm-12 col-md-6">
+      @Html.LabelFor(model => Model.Suite)
+      @Html.TextBoxFor(model => Model.Suite, new { @class = "form-control" })
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      @Html.LabelFor(model => Model.Message)
+      @Html.TextAreaFor(model => Model.Message, new { @class = "form-control", rows = "3" })
+    </div>
+  </div>
 
-  @Html.LabelFor(model => Model.Suite)
-  @Html.TextBoxFor(model => Model.Suite)
 
-  @Html.LabelFor(model => Model.Message)
-  @Html.TextBoxFor(model => Model.Message)
+  <div>
+    @Html.CheckBoxFor(model => Model.Access)
+    @Html.LabelFor(m => m.Access)
+  </div>
 
-  @Html.LabelFor(model => Model.Access)
-  @Html.TextBoxFor(model => Model.Access)
 
-<button class = "btn btn-primary" type="submit">Submit Request</button>
+  <button class="btn btn-primary" type="submit">Submit Request</button>
 
 }
