@@ -15,7 +15,7 @@ namespace database.Controllers
         // GET: Requests
         public ActionResult Index()
         {
-            return View(db.AssistanceRequests.ToList);
+            return View(/*db.AssistanceRequests.ToList*/);
         }
     }
 }
