@@ -12,6 +12,8 @@ Copyed from this awesome dudes git: https://gist.github.com/indyfromoz/4109296
 *.dll.config
 *.cache
 *.suo
+*.mdf
+*.ldf
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
 !/packages/*/lib/*/*.dll
