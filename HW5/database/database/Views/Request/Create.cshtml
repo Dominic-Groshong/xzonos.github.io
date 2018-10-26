@@ -1,0 +1,75 @@
+@model database.Models.AssistanceRequest
+
+@{
+  ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="row section-header">
+  <h2>Submit Request</h2>
+</div>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+
+  @Html.AntiForgeryToken()
+
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      @* @Html.ValidationSummary(true, "", new { @class = "text-danger" }) *@
+      @Html.LabelFor(model => Model.FirstName)
+      @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="col-sm-12 col-md-4">
+      @Html.LabelFor(model => Model.LastName)
+      @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
+    </div>
+    <div class="col-sm-12 col-md-4">
+      @Html.LabelFor(model => Model.Phone)
+      @Html.TextBoxFor(model => Model.Phone, new { @class = "form-control" })
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6">
+
+      @Html.LabelFor(model => Model.Building)
+      @Html.DropDownListFor(model => Model.Building, new List<SelectListItem>
+      {
+         new SelectListItem{ Text="Hyrule Hills", Value = "Hyrule Hills" },
+         new SelectListItem{ Text="Lon Lon Lounge", Value = "Lon Lon Lounge" },
+         new SelectListItem{ Text="Death Mountain Condos", Value = "Death Mountain Condos" },
+         new SelectListItem{ Text="Gerudo Highrise", Value = "Gerudo Highrise" },
+         new SelectListItem{ Text="Zora's Mansion", Value = "Zora's Mansion" },
+         new SelectListItem{ Text="Kokiri Gardens", Value = "Kokiri Gardens" },
+         new SelectListItem{ Text="Hylia Court", Value = "Hylia Court" },
+      }, new { @class="form-control" })
+    </div>
+    <div class="col-sm-12 col-md-6">
+      @Html.LabelFor(model => Model.Suite)
+      @Html.TextBoxFor(model => Model.Suite, new { @class = "form-control" })
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      @Html.LabelFor(model => Model.Comments)
+      @Html.TextAreaFor(model => Model.Comments, new { @class = "form-control", rows = "3" })
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <button class="btn btn-primary" type="submit">Submit Request</button>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      @Html.CheckBoxFor(model => Model.Access)
+      @Html.LabelFor(m => m.Access)
+    </div>
+  </div>
+}
+
+<div>
+  @Html.ActionLink("Back to List", "Index")
+</div>

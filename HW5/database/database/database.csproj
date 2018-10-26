@@ -217,6 +217,7 @@
     <Content Include="Views\AssistanceRequests\Details.cshtml" />
     <Content Include="Views\AssistanceRequests\Edit.cshtml" />
     <Content Include="Views\AssistanceRequests\Index.cshtml" />
+    <Content Include="Views\Request\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
