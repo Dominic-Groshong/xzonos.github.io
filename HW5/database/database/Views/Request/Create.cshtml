@@ -19,19 +19,19 @@
     <div class="col-sm-12 col-md-4">
 
       @Html.LabelFor(model => Model.FirstName)
-      @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
+      @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control", placeholder="John" })
       @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
     </div>
     <div class="col-sm-12 col-md-4">
 
       @Html.LabelFor(model => Model.LastName)
-      @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
+      @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control", placeholder="Doe" })
       @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
     </div>
     <div class="col-sm-12 col-md-4">
 
       @Html.LabelFor(model => Model.Phone)
-      @Html.TextBoxFor(model => Model.Phone, new { @class = "form-control" })
+      @Html.TextBoxFor(model => Model.Phone, new { @class = "form-control", placeholder = "555-867-5309" })
       @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
     </div>
   </div>
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="col-sm-12">
       @Html.LabelFor(model => Model.Comments)
-      @Html.TextAreaFor(model => Model.Comments, new { @class = "form-control", rows = "3" })
+      @Html.TextAreaFor(model => Model.Comments, new { @class = "form-control", rows = "3", placeholder = "Please discribe your problem." })
       @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
     </div>
   </div>

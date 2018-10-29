@@ -25,8 +25,8 @@ namespace database.Models
     [Phone]
     [Required(ErrorMessage = "You must provide a phone number")]
     [DataType(DataType.PhoneNumber)]
-    [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
-    [MaxLength(10)]
+    [RegularExpression(@"^\d{3}-\d{3}-\d{4}$", ErrorMessage = "Please format as XXX-XXX-XXXX")]
+    [MaxLength(12)]
     public string Phone { get; set; }
 
     [Required(ErrorMessage = "Please select the building you live in")]
