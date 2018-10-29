@@ -4,7 +4,7 @@ CREATE TABLE [dbo].[AssistanceRequests]
 	[FirstName]	  NVARCHAR(50)		NOT NULL,
 	[LastName]	  NVARCHAR(50)	 	NOT NULL,
   [Phone]       NVARCHAR(10)     NOT NULL,
-  [Building]    NVARCHAR(15)     NOT NULL,
+  [Building]    NVARCHAR(20)     NOT NULL,
   [Suite]       INT              NOT NULL,
   [Comments]  NVARCHAR(500) NOT NULL,
   [Access]      BIT            NOT NULL,
