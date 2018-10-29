@@ -12,14 +12,17 @@
 {
   <div class="row">
     <div class="col-sm-12 col-md-4">
+      @Html.ValidationMessageFor(model => Model.FirstName, "", new { @class = "text-danger" })
       @Html.LabelFor(model => Model.FirstName)
       @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
     </div>
     <div class="col-sm-12 col-md-4">
+      @Html.ValidationMessageFor(model => Model.LastName, "", new { @class = "text-danger" })
       @Html.LabelFor(model => Model.LastName)
       @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
     </div>
     <div class="col-sm-12 col-md-4">
+      @Html.ValidationMessageFor(model => Model.Phone, "", new { @class = "text-danger" })
       @Html.LabelFor(model => Model.Phone)
       @Html.TextBoxFor(model => Model.Phone, new { @class = "form-control" })
     </div>
@@ -28,7 +31,7 @@
   <div class="row">
 
     <div class="col-sm-12 col-md-6">
-
+      @Html.ValidationMessageFor(model => Model.Building, "", new { @class = "text-danger" })
       @Html.LabelFor(model => Model.Building)
       @Html.DropDownListFor(model => Model.Building, new List<SelectListItem>
       {
@@ -42,14 +45,16 @@
       }, new { @class="form-control" })
     </div>
     <div class="col-sm-12 col-md-6">
+      @Html.ValidationMessageFor(model => Model.Suite, "", new { @class = "text-danger" })
       @Html.LabelFor(model => Model.Suite)
       @Html.TextBoxFor(model => Model.Suite, new { @class = "form-control" })
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
-      @Html.LabelFor(model => Model.Message)
-      @Html.TextAreaFor(model => Model.Message, new { @class = "form-control", rows = "3" })
+      @Html.ValidationMessageFor(model => Model.Building, "", new { @class = "text-danger" })
+      @Html.LabelFor(model => Model.Comments)
+      @Html.TextAreaFor(model => Model.Comments, new { @class = "form-control", rows = "3" })
     </div>
   </div>
 

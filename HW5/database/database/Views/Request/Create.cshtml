@@ -17,17 +17,22 @@
 
   <div class="row">
     <div class="col-sm-12 col-md-4">
-      @* @Html.ValidationSummary(true, "", new { @class = "text-danger" }) *@
+
       @Html.LabelFor(model => Model.FirstName)
       @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
+      @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
     </div>
     <div class="col-sm-12 col-md-4">
+
       @Html.LabelFor(model => Model.LastName)
       @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
+      @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
     </div>
     <div class="col-sm-12 col-md-4">
+
       @Html.LabelFor(model => Model.Phone)
       @Html.TextBoxFor(model => Model.Phone, new { @class = "form-control" })
+      @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
     </div>
   </div>
 
@@ -46,16 +51,20 @@
          new SelectListItem{ Text="Kokiri Gardens", Value = "Kokiri Gardens" },
          new SelectListItem{ Text="Hylia Court", Value = "Hylia Court" },
       }, new { @class="form-control" })
+      @Html.ValidationMessageFor(model => model.Building, "", new { @class = "text-danger" })
     </div>
     <div class="col-sm-12 col-md-6">
+
       @Html.LabelFor(model => Model.Suite)
       @Html.TextBoxFor(model => Model.Suite, new { @class = "form-control" })
+      @Html.ValidationMessageFor(model => model.Suite, "", new { @class = "text-danger" })
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       @Html.LabelFor(model => Model.Comments)
       @Html.TextAreaFor(model => Model.Comments, new { @class = "form-control", rows = "3" })
+      @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
     </div>
   </div>
 
@@ -66,6 +75,7 @@
     <div class="col-sm-12 col-md-6">
       @Html.CheckBoxFor(model => Model.Access)
       @Html.LabelFor(m => m.Access)
+      @Html.ValidationMessageFor(model => model.Access, "", new { @class = "text-danger" })
     </div>
   </div>
 }

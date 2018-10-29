@@ -13,27 +13,30 @@ namespace database.Models
     public int ID { get; set; }
 
     [Display(Name = "First Name")]
-    [Required]
+    [Required(ErrorMessage = "Please enter your first name")]
     public string FirstName { get; set; }
 
     [Display(Name = "Last Name")]
-    [Required]
+    [Required(ErrorMessage = "Please enter your last name")]
     public string LastName { get; set; }
 
     [Phone]
-    [Required]
+    [Required(ErrorMessage = "You must provide a phone number")]
+    [DataType(DataType.PhoneNumber)]
+    [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
     public string Phone { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Please select the building you live in")]
     public string Building { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Please provide your room number")]
     public int Suite { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Please state your problem")]
     public string Comments { get; set; }
 
     [Display(Name = "Select here to give permission for the landlord or representitive to enter your suite to preform the requested maintenance. We wil call first.")]
+    [Required(ErrorMessage = "We cannot preform maintenance without permission")]
     public bool Access { get; set; }
 
     private DateTime date = DateTime.Now;

@@ -15,7 +15,11 @@ namespace database.Controllers
     // GET: AssistanceRequests
     public ActionResult Index()
     {
-      return View(db.AssistanceRequests.ToList());
+      // Linq commands to sort the list by time
+      var time = from t in db.AssistanceRequests
+                 orderby t.RequestAt ascending
+                 select t;
+      return View(time);
     }
 
     // GET: AssistanceRequests/Create
@@ -24,8 +28,8 @@ namespace database.Controllers
       return View();
     }
 
-    // POST: Requests/Create
-    [HttpPost]
+  // POST: Requests/Create
+  [HttpPost]
     // [ValidateAntiForgeryToken]
     public ActionResult Create([Bind(Include = "FirstName,LastName,Phone,Building,Suite,Comments,Access")] AssistanceRequest request)
     {
