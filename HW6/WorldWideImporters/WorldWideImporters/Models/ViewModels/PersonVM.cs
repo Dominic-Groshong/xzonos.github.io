@@ -5,6 +5,9 @@ using System.Web;
 
 namespace WorldWideImporters.Models.viewModels
 {
+  /// <summary>
+  /// This will be used to pull only the information we need from the Person model without all the extra stuff.
+  /// </summary>
   public class PersonVM
   {
     public string FullName { get; set; }

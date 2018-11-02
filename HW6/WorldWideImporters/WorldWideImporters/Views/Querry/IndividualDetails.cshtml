@@ -1,0 +1,38 @@
+@model IEnumerable<WorldWideImporters.Models.viewModels.PersonVM>
+
+@{
+  ViewBag.Title = "Individual Details";
+}
+
+<div class="row">
+  <div class="col-md-9">
+    <h2>@Model.FirstOrDefault().FullName</h2>
+    <hr />
+    <div class="row">
+      <div class="col-md-4"><p>Preferred Name:</p></div>
+      <div class="col-md-8"><p>@Model.FirstOrDefault().PreferredName</p></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><p>Phone:</p></div>
+      <div class="col-md-8"><a href="tel:@Model.FirstOrDefault().PhoneNumber">@Model.FirstOrDefault().PhoneNumber</a></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><p>Fax:</p></div>
+      <div class="col-md-8"><p>@Model.FirstOrDefault().FaxNumber</p></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><p>Email:</p></div>
+      <div class="col-md-8"><a href="mailto:@Model.FirstOrDefault().EmailAddress">@Model.FirstOrDefault().EmailAddress</a></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><p>Member Since:</p></div>
+      <div class="col-md-8"><p>@Model.FirstOrDefault().ValidFrom</p></div>
+    </div>
+  </div>
+
+  <div class="col-md-3 photo">
+    <div>
+      <img src="~/Content/images/user.png" class="img-responsive" />
+    </div>
+  </div>
+</div>

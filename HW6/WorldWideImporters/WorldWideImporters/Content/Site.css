@@ -27,3 +27,7 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+.photo{
+  padding: 40px 0 0 0;
+}

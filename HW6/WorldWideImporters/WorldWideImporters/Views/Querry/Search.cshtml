@@ -1,0 +1,36 @@
+@model IEnumerable<WorldWideImporters.Models.viewModels.PersonVM>
+
+@{
+  ViewBag.Title = "Querry";
+}
+<div class="row">
+  <div class="col-md-2 col-sm-12">
+  </div>
+  <div class="col-md-8 col-sm-12" style="text-align:center">
+    <h2>Search People</h2>
+    @using (Html.BeginForm("Search", "Querry", FormMethod.Get))
+    {
+      <div class="searchConainer">
+        <input type="text" class="form-control" name="search" placeholder="Enter Name" required>
+        <button type="submit" class="btn btn-primary searchIcon">Search</button>
+      </div>
+    }
+  </div>
+  <div class="col-md-2 col-sm-12">
+  </div>
+</div>
+
+@if (ViewBag.Bit == 1)
+{
+  <table>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>
+          @Html.ActionLink(item.FullName, "IndividualDetails", "Querry", new { Name = item.FullName }, null)
+        </td>
+      </tr>
+    }
+  </table>
+}
+
