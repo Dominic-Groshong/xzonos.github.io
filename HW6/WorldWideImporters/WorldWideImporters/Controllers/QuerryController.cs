@@ -210,7 +210,7 @@ namespace WorldWideImporters.Controllers
     {
 
       var Details = db.Orders
-                      .Where(o => o.CustomerID.Equals(2))
+                      .Where(o => o.CustomerID.Equals(ID))
                       .SelectMany(i => i.Invoices)
                       .SelectMany(il => il.InvoiceLines)
                       .OrderByDescending(x => x.LineProfit)
