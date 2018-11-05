@@ -79,6 +79,9 @@ namespace WorldWideImporters.Controllers
 
           // Top 10 most profitable line items
           Details.Invoice = MostProfitable(Details.Company.First().CustomerID);
+
+          // Get the company address
+          Details.Address = GetAddress(Details.Company.First().CustomerID);
         }
         // Get the total number of orders for the customer.
         
@@ -168,6 +171,26 @@ namespace WorldWideImporters.Controllers
     }
 
     /// <summary>
+    /// Preform a search on the database for the address of a given customer.
+    /// </summary>
+    /// <param name="ID">The ID of the Customer we are searching for</param>
+    /// <returns>Address of the customer</returns>
+    private List<AddressVM> GetAddress(int ID)
+    {
+      var address = db.Customers
+                          .Where(c => c.CustomerID.Equals(ID))
+                          .Select(ad => new AddressVM
+                          {
+                            City = ad.City.CityName,
+                            State = ad.City.StateProvince.StateProvinceCode,
+                            Address = ad.PostalAddressLine1,
+                            Zip = ad.PostalPostalCode
+                          }).ToList();
+
+      return address;
+    }
+
+    /// <summary>
     /// Preform a search on the database for orders and get the sum of the extended price.
     /// </summary>
     /// <param name="ID">The ID of the Customer we are searching for</param>
@@ -209,7 +232,7 @@ namespace WorldWideImporters.Controllers
     private List<InvoiceLineVM> MostProfitable(int ID)
     {
 
-      var Details = db.Orders
+      var profitable = db.Orders
                       .Where(o => o.CustomerID.Equals(ID))
                       .SelectMany(i => i.Invoices)
                       .SelectMany(il => il.InvoiceLines)
@@ -220,10 +243,26 @@ namespace WorldWideImporters.Controllers
                         StockID = il.StockItemID,
                         Description = il.Description,
                         Profit = il.LineProfit,
-                        SalesPerson = il.Person.FullName
                       }).ToList();
+ 
+      var contact = db.Orders
+                      .Where(o => o.CustomerID.Equals(ID))
+                      .SelectMany(i => i.Invoices)
+                      .SelectMany(il => il.InvoiceLines)
+                      .OrderByDescending(x => x.LineProfit)
+                      .Take(10)
+                      .Include("InvoiceID")
+                      .Select(x => x.Invoice)
+                      .Include("SalespersonID")
+                      .Select(x => x.Person4.FullName).ToList();
 
-      return Details;
+      for(int i = 0; i < 10; i++)
+      {
+        profitable.ElementAt(i).SalesPerson = contact.ElementAt(i);
+      }
+
+
+      return profitable;
     }
   }
 }

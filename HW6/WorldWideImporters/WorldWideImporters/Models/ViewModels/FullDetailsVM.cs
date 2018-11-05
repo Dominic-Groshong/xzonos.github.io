@@ -13,6 +13,7 @@ namespace WorldWideImporters.Models.ViewModels
     public IEnumerable<PersonVM> Person { get; set; }
     public IEnumerable<CustomerVM> Company { get; set; }
     public IEnumerable<InvoiceLineVM> Invoice { get; set; }
+    public IEnumerable<AddressVM> Address { get; set; }
     public int TotalOrders { get; set; }
     public decimal GrossSales { get; set; }
     public decimal TotalProfit { get; set; }
