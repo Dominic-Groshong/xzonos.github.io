@@ -1,38 +1,131 @@
-@model IEnumerable<WorldWideImporters.Models.viewModels.PersonVM>
+@model WorldWideImporters.Models.ViewModels.FullDetailsVM
 
-@{
-  ViewBag.Title = "Individual Details";
-}
+    @{
+      ViewBag.Title = "Individual Details";
+    }
 
-<div class="row">
-  <div class="col-md-9">
-    <h2>@Model.FirstOrDefault().FullName</h2>
-    <hr />
     <div class="row">
-      <div class="col-md-4"><p>Preferred Name:</p></div>
-      <div class="col-md-8"><p>@Model.FirstOrDefault().PreferredName</p></div>
-    </div>
-    <div class="row">
-      <div class="col-md-4"><p>Phone:</p></div>
-      <div class="col-md-8"><a href="tel:@Model.FirstOrDefault().PhoneNumber">@Model.FirstOrDefault().PhoneNumber</a></div>
-    </div>
-    <div class="row">
-      <div class="col-md-4"><p>Fax:</p></div>
-      <div class="col-md-8"><p>@Model.FirstOrDefault().FaxNumber</p></div>
-    </div>
-    <div class="row">
-      <div class="col-md-4"><p>Email:</p></div>
-      <div class="col-md-8"><a href="mailto:@Model.FirstOrDefault().EmailAddress">@Model.FirstOrDefault().EmailAddress</a></div>
-    </div>
-    <div class="row">
-      <div class="col-md-4"><p>Member Since:</p></div>
-      <div class="col-md-8"><p>@Model.FirstOrDefault().ValidFrom</p></div>
-    </div>
-  </div>
+      @*Contact Information - Person*@
+      <div class="col-md-9">
+        <h2>@Model.Person.FirstOrDefault().FullName</h2>
+        <hr />
 
-  <div class="col-md-3 photo">
-    <div>
-      <img src="~/Content/images/user.png" class="img-responsive" />
+        <div class="row">
+          <div class="col-md-4"><p>Preferred Name:</p></div>
+          <div class="col-md-8"><p>@Model.Person.FirstOrDefault().PreferredName</p></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"><p>Phone:</p></div>
+          <div class="col-md-8"><a href="tel:@Model.Person.FirstOrDefault().PhoneNumber">@Model.Person.FirstOrDefault().PhoneNumber</a></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"><p>Fax:</p></div>
+          <div class="col-md-8"><p>@Model.Person.FirstOrDefault().FaxNumber</p></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"><p>Email:</p></div>
+          <div class="col-md-8"><a href="mailto:@Model.Person.FirstOrDefault().EmailAddress">@Model.Person.FirstOrDefault().EmailAddress</a></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"><p>Member Since:</p></div>
+          <div class="col-md-8"><p>@Model.Person.FirstOrDefault().MemberSince</p></div>
+        </div>
+
+        @*Contact Information - Company*@
+
+        @if (Model.Company != null)
+        {
+          <h3>Company Details</h3>
+          <hr />
+
+          <div class="row">
+            <div class="col-md-4"><p>Company Name:</p></div>
+            <div class="col-md-8"><p>@Model.Company.FirstOrDefault().CustomerName</p></div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"><p>Phone Number:</p></div>
+            <div class="col-md-8"><p>@Model.Company.FirstOrDefault().PhoneNumber</p></div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"><p>Fax Number:</p></div>
+            <div class="col-md-8"><p>@Model.Company.FirstOrDefault().FaxNumber</p></div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"><p>Website:</p></div>
+            <div class="col-md-8"><p><a href="@Model.Company.FirstOrDefault().WebsiteURL" target="_blank">@Model.Company.FirstOrDefault().WebsiteURL</a></p></div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"><p>Member Since:</p></div>
+            <div class="col-md-8"><p>@Model.Company.FirstOrDefault().MemberSince</p></div>
+          </div>
+
+          <h3>Purchases</h3>
+          <hr />
+          <div class="row">
+            <div class="col-md-4"><p>Total Orders:</p></div>
+            <div class="col-md-8"><p>@Model.TotalOrders</p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><p>Gross Sales:</p></div>
+            <div class="col-md-8"><p>$@Model.GrossSales</p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><p>Total Profit:</p></div>
+            <div class="col-md-8"><p>$@Model.TotalProfit</p></div>
+          </div>
+
+          <h3>Most Profitable Items</h3>
+            <table class="table">
+              <tr>
+                <th>
+                  @Html.DisplayNameFor(m => m.Invoice.FirstOrDefault().StockID)
+                </th>
+                <th>
+                  @Html.DisplayNameFor(m => m.Invoice.FirstOrDefault().Description)
+                </th>
+                <th>
+                  @Html.DisplayNameFor(m => m.Invoice.FirstOrDefault().Profit)
+                </th>
+                <th>
+                  @Html.DisplayNameFor(m => m.Invoice.FirstOrDefault().SalesPerson)
+                </th>
+              </tr>
+              @foreach (var item in Model.Invoice)
+              {
+                <tr>
+                  <td>
+                    @Html.DisplayFor(modelItem => item.StockID)
+                  </td>
+                  <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                  </td>
+                  <td>
+                    @Html.DisplayFor(modelItem => item.Profit)
+                  </td>
+                  <td>
+                    @Html.DisplayFor(modelItem => item.SalesPerson)
+                  </td>
+                </tr>
+              }
+            </table>
+
+
+
+
+        }
+      </div>
+
+      <div class="col-md-3 photo">
+        <div>
+          <img src="~/Content/images/user.png" class="img-responsive" />
+        </div>
+      </div>
     </div>
-  </div>
-</div>
