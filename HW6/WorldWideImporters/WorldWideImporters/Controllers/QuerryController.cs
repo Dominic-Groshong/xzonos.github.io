@@ -61,13 +61,23 @@ namespace WorldWideImporters.Controllers
 
         Debug.WriteLine(Details.Person.FirstOrDefault().Customer);
 
+        // This is how I prevent a null exception on the view. 
         if(Details.Person.FirstOrDefault().Customer.Count() > 0)
         {
           // If primary contact add company contact infomation.
           Details.Company = CompanyDetails(Details.Person.First().PersonID);
+
+          // Now that we have a customer we can use the CustomerID to get everything else
+          // The total number of orders
           Details.TotalOrders = CountOrders(Details.Company.First().CustomerID);
+
+          // Total Gross Sales
           Details.GrossSales = CalcGross(Details.Company.First().CustomerID);
+
+          // Total Profit
           Details.TotalProfit = CalcProfit(Details.Company.First().CustomerID);
+
+          // Top 10 most profitable line items
           Details.Invoice = MostProfitable(Details.Company.First().CustomerID);
         }
         // Get the total number of orders for the customer.
@@ -146,7 +156,7 @@ namespace WorldWideImporters.Controllers
     /// <summary>
     /// Preform a search on the database for orders and count the total for a customer.
     /// </summary>
-    /// <param name="ID">The ID of the person we are searching for</param>
+    /// <param name="ID">The ID of the Customer we are searching for</param>
     /// <returns>Total number of orders for a customer</returns>
     private int CountOrders(int ID)
     {
@@ -158,9 +168,9 @@ namespace WorldWideImporters.Controllers
     }
 
     /// <summary>
-    /// Preform a search on the database for orders and get the gross sum of the extended price.
+    /// Preform a search on the database for orders and get the sum of the extended price.
     /// </summary>
-    /// <param name="ID">The ID of the person we are searching for</param>
+    /// <param name="ID">The ID of the Customer we are searching for</param>
     /// <returns>Total number of orders for a customer</returns>
     private decimal CalcGross(int ID)
     {
@@ -175,7 +185,7 @@ namespace WorldWideImporters.Controllers
     }
 
     /// <summary>
-    /// Preform a search on the database for orders and get the total profit.
+    /// Preform a search on the database for orders and get the sum of the profit column.
     /// </summary>
     /// <param name="ID">The ID of the person we are searching for</param>
     /// <returns>Total number of orders for a customer</returns>
@@ -192,10 +202,10 @@ namespace WorldWideImporters.Controllers
     }
 
     /// <summary>
-    /// Preform a search on the database for orders and get the total profit.
+    /// Select many invoices, and then many invoice lines, then order by decending, take the top 10, create the new invoice view model.
     /// </summary>
-    /// <param name="ID">The ID of the person we are searching for</param>
-    /// <returns>Total number of orders for a customer</returns>
+    /// <param name="ID">The ID of the Customer we are searching</param>
+    /// <returns>List of top 10 Line Items</returns>
     private List<InvoiceLineVM> MostProfitable(int ID)
     {
 

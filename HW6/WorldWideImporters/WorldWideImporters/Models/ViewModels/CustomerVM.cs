@@ -5,6 +5,10 @@ using System.Web;
 
 namespace WorldWideImporters.Models.ViewModels
 {
+
+  /// <summary>
+  /// This will be used to pull only the information we need from the Customer model without all the extra stuff.
+  /// </summary>
   public class CustomerVM
   {
     public int CustomerID { get; set; }

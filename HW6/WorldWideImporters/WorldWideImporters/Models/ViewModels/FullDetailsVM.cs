@@ -5,6 +5,9 @@ using System.Web;
 
 namespace WorldWideImporters.Models.ViewModels
 {
+  /// <summary>
+  /// This is the main view model, we store each of the other view models in here and then access them in the controller and on the view page.
+  /// </summary>
   public class FullDetailsVM
   {
     public IEnumerable<PersonVM> Person { get; set; }
