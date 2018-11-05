@@ -1,4 +1,5 @@
 @model WorldWideImporters.Models.ViewModels.FullDetailsVM
+
 <div class="container body-content">
   @{
     ViewBag.Title = "Individual Details";
@@ -127,6 +128,17 @@
       <div>
         <img src="~/Content/images/user.png" class="img-responsive" />
       </div>
+
+      @if (Model.Address != null)
+      {
+        <h3>Address</h3>
+        <hr />
+
+        <p>@Html.DisplayFor(m => m.Address.FirstOrDefault().Address)</p>
+        <p>@Html.DisplayFor(m => m.Address.FirstOrDefault().City) @Html.DisplayNameFor(m => m.Address.FirstOrDefault().State), @Html.DisplayFor(m => m.Address.FirstOrDefault().Zip)</p>
+
+      }
+
     </div>
   </div>
   </div>
