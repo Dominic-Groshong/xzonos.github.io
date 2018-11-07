@@ -37,7 +37,6 @@ namespace WorldWideImporters.Controllers
         ViewBag.Bit = 1;
         return View(List);
       }
-
     }
 
     public ActionResult IndividualDetails(string Name)
