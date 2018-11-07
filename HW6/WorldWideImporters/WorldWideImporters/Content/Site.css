@@ -95,3 +95,7 @@ footer a{
     text-decoration: none;
     background: #efefef;
   }
+
+#mapid {
+  height: 180px;
+}

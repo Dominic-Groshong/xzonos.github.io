@@ -17,5 +17,7 @@ namespace WorldWideImporters.Models.ViewModels
     public int TotalOrders { get; set; }
     public decimal GrossSales { get; set; }
     public decimal TotalProfit { get; set; }
-   }
+    public double? Latitude { get; set; }
+    public double? Longitude { get; set; }
+  }
 }

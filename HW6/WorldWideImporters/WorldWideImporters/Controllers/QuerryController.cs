@@ -82,9 +82,15 @@ namespace WorldWideImporters.Controllers
 
           // Get the company address
           Details.Address = GetAddress(Details.Company.First().CustomerID);
+
+          // Get the Latitude address
+          Details.Latitude = GetLat(Details.Company.First().CustomerID);
+
+          // Get the Latitude address
+          Details.Longitude = GetLong(Details.Company.First().CustomerID);
         }
         // Get the total number of orders for the customer.
-        
+
 
 
         return View(Details);
@@ -106,6 +112,38 @@ namespace WorldWideImporters.Controllers
                                      FullName = n.FullName
                                    }).ToList();
       return ListNames;
+    }
+
+    /// <summary>
+    /// Get the latitude of the customer
+    /// </summary>
+    /// <param name="search"></param>
+    /// <returns></returns>
+    private double? GetLat(int ID)
+    {
+      double? Latitude = db.Customers
+                            .Where(o => o.CustomerID.Equals(ID))
+                            .Select(x => x.City)
+                            .Include("City")
+                            .Select(x => x.Location.Latitude).First();
+
+      return Latitude;
+    }
+
+    /// <summary>
+    /// Get the Longitude of the customer
+    /// </summary>
+    /// <param name="search"></param>
+    /// <returns></returns>
+    private double? GetLong(int ID)
+    {
+      double? Longitude = db.Customers
+                            .Where(o => o.CustomerID.Equals(ID))
+                            .Select(x => x.City)
+                            .Include("City")
+                            .Select(x => x.Location.Longitude).First();
+
+      return Longitude;
     }
 
 
@@ -256,7 +294,7 @@ namespace WorldWideImporters.Controllers
                       .Include("SalespersonID")
                       .Select(x => x.Person4.FullName).ToList();
 
-      for(int i = 0; i < 10; i++)
+      for (int i = 0; i < 10; i++)
       {
         profitable.ElementAt(i).SalesPerson = contact.ElementAt(i);
       }
