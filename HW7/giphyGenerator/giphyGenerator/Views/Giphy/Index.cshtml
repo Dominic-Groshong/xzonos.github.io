@@ -1,0 +1,14 @@
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<h1>Write A Gif</h1>
+
+<input type="text" class="form-control" name="search" placeholder="Type Text to Gif-ify" required>
+
+<div id="result"></div>
+
+@section scripts{
+  <script type="text/javascript" src="~/Scripts/GifyRequest.js"></script>
+}
