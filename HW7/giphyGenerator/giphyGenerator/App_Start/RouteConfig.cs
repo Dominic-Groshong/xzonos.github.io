@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +9,19 @@ namespace giphyGenerator
 {
     public class RouteConfig
     {
-        public static void RegisterRoutes(RouteCollection routes)
+
+    public static void GiphySearch(RouteCollection routes)
+    {
+      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+      routes.MapRoute(
+          name: "Default",
+          url: "{controller}/{action}/{input}",
+          defaults: new { controller = "Giphy", action = "Request"}
+      );
+    }
+
+    public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
