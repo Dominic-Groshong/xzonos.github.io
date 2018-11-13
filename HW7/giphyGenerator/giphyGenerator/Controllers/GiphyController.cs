@@ -15,19 +15,18 @@ namespace giphyGenerator.Controllers
   public class GiphyController : Controller
     {
 
-
-      async Task Request(string word)
+    // GET: /Giffy/Request/inputWord
+    public JsonResult SendData(string inputWord)
+    {
+      var data = new
       {
-      Debug.Write(word);
-      // Get the API Key from the AppSetting file
-      /* var apiKey = ConfigurationManager.GetSection("GiphyAPI");
-
-        var GetURL = await new HttpClient().GetAsync("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + apiKey + "&limit=5");
-        var Content = await GetURL.Content.ReadAsStringAsync();
-        Console.Write(Content);*/
+        message = inputWord
+      };
+      return Json(data, JsonRequestBehavior.AllowGet);
     }
 
-    // GET: Giphy
+
+    // GET: View
     public ActionResult Index()
         {
             return View();

@@ -15,9 +15,9 @@ namespace giphyGenerator
       routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
       routes.MapRoute(
-          name: "Default",
-          url: "{controller}/{action}/{input}",
-          defaults: new { controller = "Giphy", action = "Request"}
+          name: "Get Word",
+          url: "{controller}/{action}/{inputWord}",
+          defaults: new { controller = "Giphy", action = "GetWord" }
       );
     }
 

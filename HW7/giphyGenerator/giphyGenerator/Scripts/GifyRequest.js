@@ -1,7 +1,3 @@
-var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");
-xhr.done(function (data) { console.log("success got data", data); });
-
-
 // Triger when the spacebar is pressed.
 $('input:text').keypress(function (e) {
 
@@ -14,20 +10,20 @@ $('input:text').keypress(function (e) {
     list = list.split(" ");
     // get the last item in the list array
     var word = list.pop();
-
+    console.log(word);
     // check if the word exists in the array
     if (jQuery.inArray(word, verbs) !== -1 || jQuery.inArray(word, nouns) !== -1) {
-      var source = "/Giffy/Request/" + word;
+      var source = "/Giphy/GetWord/" + word;
       console.log(source);
     }
     // Send an async request to our server, requesting JSON back
-    /* $.ajax({
+     $.ajax({
       type: "GET",
       dataType: "json",
       url: source,
       success: displayData,
       error: errorOnAjax
-    }); */
+    });
 
   }
 });
