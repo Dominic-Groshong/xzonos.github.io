@@ -7,29 +7,24 @@ using System.Web.Routing;
 
 namespace giphyGenerator
 {
-    public class RouteConfig
-    {
+  public class RouteConfig
+  {
 
-    public static void GiphySearch(RouteCollection routes)
+    public static void RegisterRoutes(RouteCollection routes)
     {
       routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
       routes.MapRoute(
           name: "Get Word",
           url: "{controller}/{action}/{inputWord}",
-          defaults: new { controller = "Giphy", action = "GetWord" }
+          defaults: new { controller = "Giphy", action = "SendData" }
       );
-    }
 
-    public static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
+      routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Giphy", action = "Index", id = UrlParameter.Optional }
             );
-        }
     }
+  }
 }
