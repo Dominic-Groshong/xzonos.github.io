@@ -1,8 +1,8 @@
 // Triger when the spacebar is pressed.
 $('input:text').keypress(function (e) {
 
-  // `0` works is for mozilla and `32` for other browsers
-  if (e.keyCode == 0 || e.keyCode == 32) {
+  // if spacebar is pressed
+  if (e.which == 32) {
 
     // get the value
     var list = $(this).val()
@@ -10,30 +10,33 @@ $('input:text').keypress(function (e) {
     list = list.split(" ");
     // get the last item in the list array
     var word = list.pop();
-    console.log(word);
+
     // check if the word exists in the array
     if (jQuery.inArray(word, verbs) !== -1 || jQuery.inArray(word, nouns) !== -1) {
       var source = "/Giphy/SendData/" + word;
-      console.log(source);
+      // Send an async request to our server, requesting JSON back
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: source,
+        success: displayData,
+        error: errorOnAjax
+      });
     }
-    // Send an async request to our server, requesting JSON back
-     $.ajax({
-      type: "GET",
-      dataType: "json",
-      url: source,
-      success: displayData,
-      error: errorOnAjax
-    });
-
+    // if word does not exist, append to the display.
+    else {
+      $("#display").append(word + " ");
+    }
   }
+
+  
 });
 
 // Display the data that we've retrieved
 function displayData(data) {
   console.log(data);
-  $("#display").append("<img src="+ embed + " />");
+  $("#display").append("<iframe src= " + data + " width=100 height=100 frameBorder=0 allowFullScreen ></iframe >");
 }
-
 // something went wrong
 function errorOnAjax() {
   console.log("error");
