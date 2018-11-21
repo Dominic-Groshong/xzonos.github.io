@@ -6,17 +6,16 @@
 
 <h2>Index</h2>
 
-<p>
-  @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
   <tr>
     <th>
-      @Html.DisplayNameFor(model => model.Seller.FullName)
-    </th>
-    <th>
       @Html.DisplayNameFor(model => model.ItemName)
     </th>
+
+    <th>
+      @Html.DisplayNameFor(model => model.Seller.FullName)
+    </th>
+
     <th>
       @Html.DisplayNameFor(model => model.Discription)
     </th>
@@ -25,24 +24,28 @@
 
   @foreach (var item in Model)
   {
-    <tr>
-      <td>
-        @Html.DisplayFor(modelItem => item.Seller.FullName)
-      </td>
-      <td>
-        @Html.DisplayFor(modelItem => item.ItemName)
-      </td>
-      <td>
-        @Html.DisplayFor(modelItem => item.Discription)
-      </td>
-      <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.ItemID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.ItemID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.ItemID })
-      </td>
-    </tr>
+  <tr>
+    <td>
+      @Html.ActionLink(item.ItemName, "Details", new { id = item.ItemID })
+    </td>
+
+    <td>
+      @Html.DisplayFor(modelItem => item.Seller.FullName)
+    </td>
+
+    <td>
+      @Html.DisplayFor(modelItem => item.Discription)
+    </td>
+    <td>
+      @Html.ActionLink("Edit", "Edit", new { id = item.ItemID }) |
+      @Html.ActionLink("Delete", "Delete", new { id = item.ItemID })
+    </td>
+  </tr>
   }
 
 </table>
 
+<p>
+  @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
 

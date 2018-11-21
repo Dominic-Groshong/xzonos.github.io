@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -36,9 +37,21 @@ namespace AuctionHouse.Controllers
       return View(item);
     }
 
-    public JsonResult Update(int? id)
+    [HttpGet]
+    public JsonResult Update(int id)
     {
-      return Json();
+      var item = db.Items.Where(i => i.ItemID.Equals(id)).FirstOrDefault();
+      var bid = item.Bids.LastOrDefault();
+
+      var recent = new
+      {
+        name = bid.Buyer.FullName,
+        bid = bid.Price
+      };
+
+      Debug.Write(recent.bid);
+      Debug.Write(recent.name);
+      return Json(recent, JsonRequestBehavior.AllowGet);
     }
 
     // GET: Items/Create

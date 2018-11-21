@@ -12,8 +12,11 @@ namespace AuctionHouse.Models
 
         public decimal Price { get; set; }
 
+        [Display(Name = "Item Name")]
         public int FKItemID { get; set; }
 
+
+        [Display(Name = "Buyer Name")]
         public int FKBuyerID { get; set; }
 
         public virtual Buyer Buyer { get; set; }

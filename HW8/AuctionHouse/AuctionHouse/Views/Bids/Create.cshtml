@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FKItemID, "FKItemID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FKItemID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("FKItemID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FKItemID, "", new { @class = "text-danger" })
@@ -31,7 +31,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FKBuyerID, "FKBuyerID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FKBuyerID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("FKBuyerID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FKBuyerID, "", new { @class = "text-danger" })

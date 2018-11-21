@@ -13,11 +13,12 @@ namespace AuctionHouse.Models
         {
             Items = new HashSet<Item>();
         }
-
+         [Display(Name = "ID Number")]
         public int SellerID { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Seller Name")]
         public string FullName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -4,68 +4,52 @@
   ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-  <h4>Item</h4>
+  <h2>@Html.DisplayFor(model => model.ItemName)</h2>
   <hr />
-  <dl class="dl-horizontal">
-    <dt>
-      @Html.DisplayNameFor(model => model.Seller.FullName)
-    </dt>
+  <div class="row">
+    <div class="col-sm-6">
+      <div>
+        <h4>Seller Name</h4>
+        <p>@Html.DisplayFor(model => model.Seller.FullName)</p>
+      </div>
 
-    <dd>
-      @Html.DisplayFor(model => model.Seller.FullName)
-    </dd>
+      <div>
+        <h4>@Html.DisplayNameFor(model => model.Discription)</h4>
+        <p>@Html.DisplayFor(model => model.Discription)</p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <h4>Recent Bids</h4>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover ">
 
-    <dt>
-      @Html.DisplayNameFor(model => model.ItemName)
-    </dt>
+          <thead>
+            <th>Bidder Name</th>
+            <th>Price</th>
+          </thead>
 
-    <dd>
-      @Html.DisplayFor(model => model.ItemName)
-    </dd>
+          <tbody id="inner">
+            @for (int i = Model.Bids.Count() - 1; i >= 0; i--)
+            {
+              <tr>
+                <td>
+                  @Html.DisplayFor(model => model.Bids.ElementAt(i).Buyer.FullName)
+                </td>
+                <td id="price">
+                  @Html.DisplayFor(model => model.Bids.ElementAt(i).Price)
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-    <dt>
-      @Html.DisplayNameFor(model => model.Discription)
-    </dt>
-
-    <dd>
-      @Html.DisplayFor(model => model.Discription)
-    </dd>
-
-  </dl>
-</div>
-<h2>Recent Bids</h2>
-
-<table>
-
-  <tr>
-    <th>Bidder Name</th>
-    <th>Price</th>
-    <th>Time Placed</th>
-  </tr>
-
-  @for (int i = Model.Bids.Count() - 1; i > 0; i--)
-  {
-    <tr>
-      <td>
-        @Html.DisplayFor(model => model.Bids.ElementAt(i).Buyer.FullName)
-      </td>
-      <td id="price">
-        @Html.DisplayFor(model => model.Bids.ElementAt(i).Price)
-      </td>
-      <td>
-        @Html.DisplayFor(model => model.Bids.ElementAt(i).TimePlaced)
-      </td>
-    </tr>
-  }
-</table>
 <p>
-  @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
-  @Html.ActionLink("Back to List", "Index")
+  @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
 </p>
 
 @section scripts{
-<script type="text/javascript" src="~/Scripts/ajaxRequest.js"></script>
+  <script type="text/javascript" src="~/Scripts/ajaxRequest.js"></script>
 }

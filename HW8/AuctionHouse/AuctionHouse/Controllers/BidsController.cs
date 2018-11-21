@@ -14,28 +14,6 @@ namespace AuctionHouse.Controllers
   {
     private AHContext db = new AHContext();
 
-    // GET: Bids
-    public ActionResult Index()
-    {
-      var bids = db.Bids.Include(b => b.Buyer).Include(b => b.Item);
-      return View(bids.ToList());
-    }
-
-    // GET: Bids/Details/5
-    public ActionResult Details(int? id)
-    {
-      if (id == null)
-      {
-        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-      }
-      Bid bid = db.Bids.Find(id);
-      if (bid == null)
-      {
-        return HttpNotFound();
-      }
-      return View(bid);
-    }
-
     // GET: Bids/Create
     public ActionResult Create()
     {
@@ -58,11 +36,11 @@ namespace AuctionHouse.Controllers
         Bid recent = item.Bids.LastOrDefault();
 
         // Check if new bid is greater than most recent bid.
-        if (bid.Price > recent.Price)
+        if (recent == null || bid.Price > recent.Price )
         {
           db.Bids.Add(bid);
           db.SaveChanges();
-          return RedirectToAction("~/Item/Details/"+ bid.FKItemID);
+          return RedirectToAction("Details", "Item", bid.FKItemID);
         }
         else
         {

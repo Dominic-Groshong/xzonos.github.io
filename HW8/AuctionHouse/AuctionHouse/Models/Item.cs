@@ -18,12 +18,14 @@ namespace AuctionHouse.Models
 
         [Required]
         [StringLength(100)]
+        [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
         [Required]
         [StringLength(500)]
         public string Discription { get; set; }
 
+        [Display(Name = "Seller Name")]
         public int FKSellerID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
