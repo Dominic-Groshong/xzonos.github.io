@@ -25,7 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Discription, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Discription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.Discription, new { @class = "form-control", rows = 5})
                 @Html.ValidationMessageFor(model => model.Discription, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -46,6 +46,6 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div>
+      @Html.ActionLink("Back to List", "Index", "Items", null, new { @class = "btn btn-primary" })
+    </div>

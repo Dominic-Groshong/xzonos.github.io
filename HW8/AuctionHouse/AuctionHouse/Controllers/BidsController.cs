@@ -40,7 +40,7 @@ namespace AuctionHouse.Controllers
         {
           db.Bids.Add(bid);
           db.SaveChanges();
-          return RedirectToAction("Details", "Item", bid.FKItemID);
+          return RedirectToAction("Details", "Items", bid.FKItemID);
         }
         else
         {
