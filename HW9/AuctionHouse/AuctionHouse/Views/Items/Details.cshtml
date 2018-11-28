@@ -1,0 +1,55 @@
+@model AuctionHouse.Models.Item
+
+@{
+  ViewBag.Title = "Details";
+}
+
+  <h2>@Html.DisplayFor(model => model.ItemName)</h2>
+  <hr />
+  <div class="row">
+    <div class="col-sm-6">
+      <div>
+        <h4>Seller Name</h4>
+        <p>@Html.DisplayFor(model => model.Seller.FullName)</p>
+      </div>
+
+      <div>
+        <h4>@Html.DisplayNameFor(model => model.Discription)</h4>
+        <p>@Html.DisplayFor(model => model.Discription)</p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <h4>Recent Bids</h4>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover ">
+
+          <thead>
+            <th>Bidder Name</th>
+            <th>Price</th>
+          </thead>
+
+          <tbody id="inner">
+            @for (int i = Model.Bids.Count() - 1; i >= 0; i--)
+            {
+              <tr>
+                <td>
+                  @Html.DisplayFor(model => model.Bids.ElementAt(i).Buyer.FullName)
+                </td>
+                <td id="price">
+                  @Html.DisplayFor(model => model.Bids.ElementAt(i).Price)
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<p>
+  @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+</p>
+
+@section scripts{
+  <script type="text/javascript" src="~/Scripts/ajaxRequest.js"></script>
+}
