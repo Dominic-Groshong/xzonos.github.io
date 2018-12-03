@@ -45,3 +45,21 @@ Create and combine branches
 | ```git checkout [branch-name]```   | Switches to the specified branch and updates working directory |
 | ```git merge [branch]```  | Merges specified branch with current branch   |
 | ```git branch -d [branch]```  | Deletes the specified branch  |
+
+<h1 id="documentation">Documentation</h1>
+
+### Razor Documentation
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-2.1
+
+### Linq Documentation
+https://msdn.microsoft.com/en-us/library/bb394939.aspx
+
+### jQuery Documentation
+https://api.jquery.com/
+https://oscarotero.com/jquery/
+
+### For Everything else there's Mastercard
+https://www.w3schools.com/
+
+### Azure Video
+http://www.wou.edu/~morses/classes/cs46x/lecture/Videos.html

@@ -40,7 +40,7 @@ namespace AuctionHouse.Controllers
     [HttpGet]
     public JsonResult Update(int id)
     {
-      var item = db.Items.Where(i => i.ItemID.Equals(id)).FirstOrDefault();
+      var item = db.Items.Find(id);
       var bid = item.Bids.LastOrDefault();
 
       var recent = new
