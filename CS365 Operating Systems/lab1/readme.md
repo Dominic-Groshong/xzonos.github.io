@@ -4,24 +4,24 @@ This lab was to create a custom C shell on a linux system.
 >Displaying a prompt to indicate that it is ready to accept a next
 command from its user,
 
-![Displaying a prompt](https://raw.githubusercontent.com/xzonos/xzonos.github.io/master/CS365%20Operating%20Systems/lab1/imgs/one.png?token=ABANQPTCGEYWMKOZ24UBFSC46264W)
+![Displaying a prompt](https://github.com/xzonos/xzonos.github.io/blob/master/CS365%20Operating%20Systems/lab1/imgs/one.png?raw=true)
 
 > Take external commands, such as, ls, emacs and so on.
 
-![external commands](https://raw.githubusercontent.com/xzonos/xzonos.github.io/master/CS365%20Operating%20Systems/lab1/imgs/two.png?token=ABANQPVCXEFGXUX3H4PGN4K462672)
+![external commands](https://github.com/xzonos/xzonos.github.io/blob/master/CS365%20Operating%20Systems/lab1/imgs/two.png?raw=true)
 
 >**Take internal commands**
 **exit**: terminate the shell.
 
-![exit command](https://raw.githubusercontent.com/xzonos/xzonos.github.io/master/CS365%20Operating%20Systems/lab1/imgs/three.png?token=ABANQPRS3M72QNVO4USDNI2462656)
+![exit command](https://github.com/xzonos/xzonos.github.io/blob/master/CS365%20Operating%20Systems/lab1/imgs/three.png?raw=true)
 
 >**pid**: print out the current pid.
 
-![pid command](https://raw.githubusercontent.com/xzonos/xzonos.github.io/master/CS365%20Operating%20Systems/lab1/imgs/four.png?token=ABANQPSESOUXEFKL6NC7LNC462634)
+![pid command](https://github.com/xzonos/xzonos.github.io/blob/master/CS365%20Operating%20Systems/lab1/imgs/four.png?raw=true)
 
 >**help**: help information of your shell.
 
-![help command](https://raw.githubusercontent.com/xzonos/xzonos.github.io/master/CS365%20Operating%20Systems/lab1/imgs/five.png?token=ABANQPV477QKRWNNDXLJ4NK46263E)
+![help command](https://github.com/xzonos/xzonos.github.io/blob/master/CS365%20Operating%20Systems/lab1/imgs/five.png?raw=true)
 
 >Using “&” to implement multiple commands in one line
 
