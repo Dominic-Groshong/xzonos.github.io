@@ -27,7 +27,7 @@ namespace groshongScheduler
             var processes = createProcess(time);
             
             // sort processes by corresponding method
-            var sjf = processes.OrderBy(x => x.Burst);
+            var sjf = processes.OrderBy(x => x.Arival).ThenBy(x => x.Burst);
             var fcfs = processes.OrderBy(x => x.Arival);
            
             // Preform scheduling algorithem on each process list.
