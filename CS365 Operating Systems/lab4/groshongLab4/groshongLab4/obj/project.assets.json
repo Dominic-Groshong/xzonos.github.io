@@ -695,11 +695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DominicGroshong\\Dropbox\\School\\18-19\\Spring19\\CS365 Operating Systems\\labs\\lab4\\groshongLab4\\groshongLab4\\groshongLab4.csproj",
+      "projectUniqueName": "D:\\Git\\xzonos.github.io\\CS365 Operating Systems\\lab4\\groshongLab4\\groshongLab4\\groshongLab4.csproj",
       "projectName": "groshongLab4",
-      "projectPath": "C:\\Users\\DominicGroshong\\Dropbox\\School\\18-19\\Spring19\\CS365 Operating Systems\\labs\\lab4\\groshongLab4\\groshongLab4\\groshongLab4.csproj",
+      "projectPath": "D:\\Git\\xzonos.github.io\\CS365 Operating Systems\\lab4\\groshongLab4\\groshongLab4\\groshongLab4.csproj",
       "packagesPath": "C:\\Users\\DominicGroshong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DominicGroshong\\Dropbox\\School\\18-19\\Spring19\\CS365 Operating Systems\\labs\\lab4\\groshongLab4\\groshongLab4\\obj\\",
+      "outputPath": "D:\\Git\\xzonos.github.io\\CS365 Operating Systems\\lab4\\groshongLab4\\groshongLab4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
