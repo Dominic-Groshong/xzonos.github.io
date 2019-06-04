@@ -1,0 +1,11 @@
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\bin\Debug\netcoreapp2.1\groshongScheduler.deps.json
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\bin\Debug\netcoreapp2.1\groshongScheduler.runtimeconfig.json
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\bin\Debug\netcoreapp2.1\groshongScheduler.runtimeconfig.dev.json
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\bin\Debug\netcoreapp2.1\groshongScheduler.dll
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\bin\Debug\netcoreapp2.1\groshongScheduler.pdb
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\obj\Debug\netcoreapp2.1\groshongScheduler.csprojAssemblyReference.cache
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\obj\Debug\netcoreapp2.1\groshongScheduler.csproj.CoreCompileInputs.cache
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\obj\Debug\netcoreapp2.1\groshongScheduler.AssemblyInfoInputs.cache
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\obj\Debug\netcoreapp2.1\groshongScheduler.AssemblyInfo.cs
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\obj\Debug\netcoreapp2.1\groshongScheduler.dll
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab2\groshongScheduler\groshongScheduler\obj\Debug\netcoreapp2.1\groshongScheduler.pdb

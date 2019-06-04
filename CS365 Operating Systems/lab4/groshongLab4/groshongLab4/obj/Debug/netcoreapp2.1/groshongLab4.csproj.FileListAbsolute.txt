@@ -1,0 +1,11 @@
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\obj\Debug\netcoreapp2.1\groshongLab4.csprojAssemblyReference.cache
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\obj\Debug\netcoreapp2.1\groshongLab4.csproj.CoreCompileInputs.cache
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\obj\Debug\netcoreapp2.1\groshongLab4.AssemblyInfoInputs.cache
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\obj\Debug\netcoreapp2.1\groshongLab4.AssemblyInfo.cs
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\bin\Debug\netcoreapp2.1\groshongLab4.deps.json
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\bin\Debug\netcoreapp2.1\groshongLab4.runtimeconfig.json
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\bin\Debug\netcoreapp2.1\groshongLab4.runtimeconfig.dev.json
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\bin\Debug\netcoreapp2.1\groshongLab4.dll
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\bin\Debug\netcoreapp2.1\groshongLab4.pdb
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\obj\Debug\netcoreapp2.1\groshongLab4.dll
+C:\Users\DominicGroshong\Dropbox\School\18-19\Spring19\CS365 Operating Systems\labs\lab4\groshongLab4\groshongLab4\obj\Debug\netcoreapp2.1\groshongLab4.pdb

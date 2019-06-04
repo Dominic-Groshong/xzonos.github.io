@@ -1,0 +1,42 @@
+/*
+  DEVELOPER:: DOMINIC GROSHONG
+  VERSION :: 1/20/19 
+  CLASS :: CS360
+*/
+
+camera 
+{ 
+    location < 0 , 3 , -5> 
+    look_at  <0 , 0 , 0>   
+}
+
+light_source
+{
+    <100 ,100, 100> 
+    color rgb<255,255,255>
+}
+
+plane 
+{ 
+    <0,1,0> , 0 
+    texture 
+    { 
+        pigment
+        { 
+            color rgb<0, .75, .75>
+        }
+    } 
+}                  
+
+sphere 
+{ 
+    <0,1,0>, 1
+
+    texture 
+    { 
+        pigment
+        { 
+            color rgb<1.00, 0.55, 0.00>
+        }
+    }
+}
